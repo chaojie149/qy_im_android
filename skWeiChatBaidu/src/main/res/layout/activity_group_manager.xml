@@ -1,0 +1,603 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/normal_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/a_view_actionbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/transfer_group_rl"
+                style="@style/IMTbleLine"
+                android:layout_marginTop="12dp">
+
+                <TextView
+                    android:id="@+id/transfer_group_text"
+                    style="@style/IMTbleLine_TextKey"
+                    android:text="@string/transfer_group_owner" />
+
+                <ImageView
+                    style="@style/IMTbleLine_ArrowImg"
+                    android:contentDescription="@string/app_name" />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/set_pay_group_rl"
+                style="@style/IMTbleLine"
+                android:layout_marginTop="12dp">
+
+                <TextView
+                    android:id="@+id/set_pay_group_text"
+                    style="@style/IMTbleLine_TextKey"
+                    android:text="@string/set_pay_group" />
+
+                <ImageView
+                    style="@style/IMTbleLine_ArrowImg"
+                    android:contentDescription="@string/app_name" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/set_manager_rl"
+                style="@style/IMTbleLine"
+                android:layout_marginTop="12dp"
+                android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/set_manager_text"
+                    style="@style/IMTbleLine_TextKey"
+                    android:text="@string/design_admin" />
+
+                <ImageView
+                    android:id="@+id/set_manager_iv"
+                    style="@style/IMTbleLine_ArrowImg"
+                    android:contentDescription="@string/app_name" />
+
+            </RelativeLayout>
+
+            <View
+                style="@style/View_Line"
+                android:layout_marginStart="@dimen/margin_screen_old" />
+
+            <RelativeLayout
+                android:id="@+id/set_invisible_rl"
+                style="@style/IMTbleLine"
+                android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/set_invisible_text"
+                    style="@style/IMTbleLine_TextKey"
+                    android:text="@string/set_invisible" />
+
+                <ImageView
+                    android:id="@+id/set_invisible_iv"
+                    style="@style/IMTbleLine_ArrowImg"
+                    android:contentDescription="@string/app_name" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/copy_rl"
+                style="@style/IMTbleLine"
+                android:layout_marginTop="12dp"
+                android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/copy_text"
+                    style="@style/IMTbleLine_TextKey"
+                    android:text="@string/copy_group" />
+
+                <ImageView
+                    android:id="@+id/copy_arrow_img"
+                    style="@style/IMTbleLine_ArrowImg"
+                    android:contentDescription="@string/app_name" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/set_guardian_rl"
+                style="@style/IMTbleLine"
+                android:layout_marginTop="9dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/set_guardian_text"
+                    style="@style/IMTbleLine_TextKey"
+                    android:text="@string/set_guardian" />
+
+                <ImageView
+                    android:id="@+id/set_guardian_iv"
+                    style="@style/IMTbleLine_ArrowImg"
+                    android:contentDescription="@string/app_name" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_transmission_select"
+                style="@style/IMTbleLine"
+                android:layout_marginTop="12dp">
+
+                <TextView
+                    android:id="@+id/tip_tv"
+                    style="@style/IMTbleLine_TextKey"
+                    android:text="@string/msg_transmission_type" />
+
+                <TextView
+                    android:id="@+id/rl_transmission_select_tv"
+                    style="@style/IMTbleLine_TextValue"
+                    android:layout_toStartOf="@+id/rl_transmission_select_iv"
+                    android:layout_toEndOf="@+id/tip_tv"
+                    tools:text="@string/msg_transmission_public" />
+
+                <ImageView
+                    android:id="@+id/rl_transmission_select_iv"
+                    style="@style/IMTbleLine_ArrowImg" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_reset_group_chat_key"
+                style="@style/IMTbleLine"
+                android:layout_marginTop="12dp"
+                android:visibility="gone">
+
+                <TextView
+                    style="@style/IMTbleLine_TextKey"
+                    android:text="@string/reset_group_chat_key" />
+
+                <ImageView
+                    android:id="@+id/iv_reset_group_chat_key"
+                    style="@style/IMTbleLine_ArrowImg" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_look"
+                style="@style/IMTbleLine"
+                android:layout_marginTop="12dp"
+                android:visibility="visible">
+
+                <TextView
+                    style="@style/IMTbleLine_TextKey_End_Btn"
+                    android:layout_toStartOf="@+id/sb_look"
+                    android:text="@string/public_group_title" />
+
+                <com.tongxin.caihong.view.SwitchButton
+                    android:id="@+id/sb_look"
+                    style="@style/IMTbleLine_ArrowBtn"
+                    android:clickable="false"
+                    app:sb_background="@color/app_white"
+                    app:sb_checked_color="@color/main_color"
+                    app:sb_effect_duration="100"
+                    app:sb_shadow_radius="4dp"
+                    app:sb_show_indicator="false" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/rl_look_summer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="15dp"
+                android:paddingTop="5dp"
+                android:paddingRight="9dp"
+                android:paddingBottom="5dp"
+                android:text="@string/hint_public_group"
+                android:textColor="@color/Grey_500"
+                android:textSize="@dimen/two_level_content"
+                android:visibility="visible" />
+
+            <RelativeLayout
+                android:id="@+id/rl_read"
+                style="@style/IMTbleLine"
+                android:layout_marginTop="9dp">
+
+                <TextView
+                    style="@style/IMTbleLine_TextKey_End_Btn"
+                    android:layout_toStartOf="@+id/sb_read"
+                    android:text="@string/display_read_number" />
+
+                <com.tongxin.caihong.view.SwitchButton
+                    android:id="@+id/sb_read"
+                    style="@style/IMTbleLine_ArrowBtn"
+                    android:clickable="false"
+                    app:sb_background="@color/app_white"
+                    app:sb_checked_color="@color/main_color"
+                    app:sb_effect_duration="100"
+                    app:sb_shadow_radius="4dp"
+                    app:sb_show_indicator="false" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="15dp"
+                android:paddingTop="5dp"
+                android:paddingRight="9dp"
+                android:paddingBottom="5dp"
+                android:text="@string/hint_display_readed_number"
+                android:textColor="@color/Grey_500"
+                android:textSize="@dimen/two_level_content" />
+
+            <RelativeLayout
+                android:id="@+id/rl_group_verify"
+                style="@style/IMTbleLine"
+                android:layout_marginTop="9dp">
+
+                <TextView
+                    style="@style/IMTbleLine_TextKey_End_Btn"
+                    android:layout_toStartOf="@+id/sb_verify"
+                    android:text="@string/invitation_confirmation" />
+
+                <com.tongxin.caihong.view.SwitchButton
+                    android:id="@+id/sb_verify"
+                    style="@style/IMTbleLine_ArrowBtn"
+                    android:clickable="false"
+                    app:sb_background="@color/app_white"
+                    app:sb_checked_color="@color/main_color"
+                    app:sb_effect_duration="100"
+                    app:sb_shadow_radius="4dp"
+                    app:sb_show_indicator="false" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="15dp"
+                android:paddingTop="5dp"
+                android:paddingRight="9dp"
+                android:paddingBottom="5dp"
+                android:text="@string/need_to_be_confirmed"
+                android:textColor="@color/Grey_500"
+                android:textSize="@dimen/two_level_content" />
+
+            <RelativeLayout
+                android:id="@+id/rl_group_notify"
+                style="@style/IMTbleLine"
+                android:layout_marginTop="9dp">
+
+                <TextView
+                    style="@style/IMTbleLine_TextKey_End_Btn"
+                    android:layout_toStartOf="@+id/sb_notify"
+                    android:text="@string/remove_member_notify" />
+
+                <com.tongxin.caihong.view.SwitchButton
+                    android:id="@+id/sb_notify"
+                    style="@style/IMTbleLine_ArrowBtn"
+                    android:clickable="false"
+                    app:sb_background="@color/app_white"
+                    app:sb_checked_color="@color/main_color"
+                    app:sb_effect_duration="100"
+                    app:sb_shadow_radius="4dp"
+                    app:sb_show_indicator="false" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="15dp"
+                android:paddingTop="5dp"
+                android:paddingRight="9dp"
+                android:paddingBottom="5dp"
+                android:text="@string/tip_exit_group_notify"
+                android:textColor="@color/Grey_500"
+                android:textSize="@dimen/two_level_content" />
+
+            <RelativeLayout
+                android:id="@+id/rl_show_member"
+                style="@style/IMTbleLine"
+                android:layout_marginTop="9dp">
+
+                <TextView
+                    style="@style/IMTbleLine_TextKey_End_Btn"
+                    android:layout_toStartOf="@+id/sb_show_member"
+                    android:text="@string/display_member" />
+
+                <com.tongxin.caihong.view.SwitchButton
+                    android:id="@+id/sb_show_member"
+                    style="@style/IMTbleLine_ArrowBtn"
+                    android:clickable="false"
+                    app:sb_background="@color/app_white"
+                    app:sb_checked_color="@color/main_color"
+                    app:sb_effect_duration="100"
+                    app:sb_shadow_radius="4dp"
+                    app:sb_show_indicator="false" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="15dp"
+                android:paddingTop="5dp"
+                android:paddingRight="9dp"
+                android:paddingBottom="5dp"
+                android:text="@string/hint_desplay_member"
+                android:textColor="@color/Grey_500"
+                android:textSize="@dimen/two_level_content" />
+
+            <RelativeLayout
+                android:id="@+id/rl_allow_chat"
+                style="@style/IMTbleLine"
+                android:layout_marginTop="9dp">
+
+                <TextView
+                    style="@style/IMTbleLine_TextKey_End_Btn"
+                    android:layout_toStartOf="@+id/sb_allow_chat"
+                    android:text="@string/member_chat_privately" />
+
+                <com.tongxin.caihong.view.SwitchButton
+                    android:id="@+id/sb_allow_chat"
+                    style="@style/IMTbleLine_ArrowBtn"
+                    android:clickable="false"
+                    app:sb_background="@color/app_white"
+                    app:sb_checked_color="@color/main_color"
+                    app:sb_effect_duration="100"
+                    app:sb_shadow_radius="4dp"
+                    app:sb_show_indicator="false" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="15dp"
+                android:paddingTop="5dp"
+                android:paddingRight="9dp"
+                android:paddingBottom="5dp"
+                android:text="@string/hint_member_chat_privately"
+                android:textColor="@color/Grey_500"
+                android:textSize="@dimen/two_level_content" />
+
+            <RelativeLayout
+                android:id="@+id/rl_allow_invite"
+                style="@style/IMTbleLine"
+                android:layout_marginTop="9dp">
+
+                <TextView
+                    style="@style/IMTbleLine_TextKey_End_Btn"
+                    android:layout_toStartOf="@+id/sb_allow_invite"
+                    android:text="@string/member_invite_friends" />
+
+                <com.tongxin.caihong.view.SwitchButton
+                    android:id="@+id/sb_allow_invite"
+                    style="@style/IMTbleLine_ArrowBtn"
+                    android:clickable="false"
+                    app:sb_background="@color/app_white"
+                    app:sb_checked_color="@color/main_color"
+                    app:sb_effect_duration="100"
+                    app:sb_shadow_radius="4dp"
+                    app:sb_show_indicator="false" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="15dp"
+                android:paddingTop="5dp"
+                android:paddingRight="9dp"
+                android:paddingBottom="5dp"
+                android:text="@string/hint_member_invite_friends"
+                android:textColor="@color/Grey_500"
+                android:textSize="@dimen/two_level_content" />
+
+            <RelativeLayout
+                android:id="@+id/rl_allow_upload"
+                style="@style/IMTbleLine"
+                android:layout_marginTop="9dp">
+
+                <TextView
+                    style="@style/IMTbleLine_TextKey_End_Btn"
+                    android:layout_toStartOf="@+id/sb_allow_upload"
+                    android:text="@string/member_upload" />
+
+                <com.tongxin.caihong.view.SwitchButton
+                    android:id="@+id/sb_allow_upload"
+                    style="@style/IMTbleLine_ArrowBtn"
+                    android:clickable="false"
+                    app:sb_background="@color/app_white"
+                    app:sb_checked_color="@color/main_color"
+                    app:sb_effect_duration="100"
+                    app:sb_shadow_radius="4dp"
+                    app:sb_show_indicator="false" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="15dp"
+                android:paddingTop="5dp"
+                android:paddingRight="9dp"
+                android:paddingBottom="5dp"
+                android:text="@string/hint_member_upload"
+                android:textColor="@color/Grey_500"
+                android:textSize="@dimen/two_level_content" />
+
+            <RelativeLayout
+                android:id="@+id/rl_allow_conference"
+                style="@style/IMTbleLine"
+                android:layout_marginTop="9dp">
+
+                <TextView
+                    style="@style/IMTbleLine_TextKey_End_Btn"
+                    android:layout_toStartOf="@+id/sb_allow_conference"
+                    android:text="@string/member_meetings" />
+
+                <com.tongxin.caihong.view.SwitchButton
+                    android:id="@+id/sb_allow_conference"
+                    style="@style/IMTbleLine_ArrowBtn"
+                    android:clickable="false"
+                    app:sb_background="@color/app_white"
+                    app:sb_checked_color="@color/main_color"
+                    app:sb_effect_duration="100"
+                    app:sb_shadow_radius="4dp"
+                    app:sb_show_indicator="false" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="15dp"
+                android:paddingTop="5dp"
+                android:paddingRight="9dp"
+                android:paddingBottom="5dp"
+                android:text="@string/hint_member_meetings"
+                android:textColor="@color/Grey_500"
+                android:textSize="@dimen/two_level_content" />
+
+            <RelativeLayout
+                android:id="@+id/rl_allow_send_course"
+                style="@style/IMTbleLine"
+                android:layout_marginTop="9dp">
+
+                <TextView
+                    style="@style/IMTbleLine_TextKey_End_Btn"
+                    android:layout_toStartOf="@+id/sb_allow_send_course"
+                    android:text="@string/member_course" />
+
+                <com.tongxin.caihong.view.SwitchButton
+                    android:id="@+id/sb_allow_send_course"
+                    style="@style/IMTbleLine_ArrowBtn"
+                    android:clickable="false"
+                    app:sb_background="@color/app_white"
+                    app:sb_checked_color="@color/main_color"
+                    app:sb_effect_duration="100"
+                    app:sb_shadow_radius="4dp"
+                    app:sb_show_indicator="false" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="15dp"
+                android:paddingTop="5dp"
+                android:paddingRight="9dp"
+                android:paddingBottom="5dp"
+                android:text="@string/hint_member_course"
+                android:textColor="@color/Grey_500"
+                android:textSize="@dimen/two_level_content" />
+
+            <RelativeLayout
+                android:id="@+id/rl_able_live"
+                style="@style/IMTbleLine"
+                android:layout_marginTop="9dp">
+
+                <TextView
+                    style="@style/IMTbleLine_TextKey_End_Btn"
+                    android:layout_toStartOf="@+id/sb_able_live"
+                    android:text="@string/allow_member_live" />
+
+                <com.tongxin.caihong.view.SwitchButton
+                    android:id="@+id/sb_able_live"
+                    style="@style/IMTbleLine_ArrowBtn"
+                    android:clickable="false"
+                    app:sb_background="@color/app_white"
+                    app:sb_checked_color="@color/main_color"
+                    app:sb_effect_duration="100"
+                    app:sb_shadow_radius="4dp"
+                    app:sb_show_indicator="false" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="15dp"
+                android:paddingTop="5dp"
+                android:paddingRight="9dp"
+                android:paddingBottom="5dp"
+                android:text="@string/muc_able_live"
+                android:textColor="@color/Grey_500"
+                android:textSize="@dimen/two_level_content" />
+
+            <RelativeLayout
+                android:id="@+id/rl_modify_card"
+                style="@style/IMTbleLine"
+                android:layout_marginTop="9dp">
+
+                <TextView
+                    style="@style/IMTbleLine_TextKey_End_Btn"
+                    android:layout_toStartOf="@+id/sb_modify_card"
+                    android:text="@string/allow_modify_card" />
+
+                <com.tongxin.caihong.view.SwitchButton
+                    android:id="@+id/sb_modify_card"
+                    style="@style/IMTbleLine_ArrowBtn"
+                    android:clickable="false"
+                    app:sb_background="@color/app_white"
+                    app:sb_checked_color="@color/main_color"
+                    app:sb_effect_duration="100"
+                    app:sb_shadow_radius="4dp"
+                    app:sb_show_indicator="false" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="15dp"
+                android:paddingTop="5dp"
+                android:paddingRight="9dp"
+                android:paddingBottom="5dp"
+                android:text="@string/muc_modify_card"
+                android:textColor="@color/Grey_500"
+                android:textSize="@dimen/two_level_content" />
+
+            <RelativeLayout
+                android:id="@+id/rl_show_marker"
+                style="@style/IMTbleLine"
+                android:layout_marginTop="9dp">
+
+                <TextView
+                    style="@style/IMTbleLine_TextKey_End_Btn"
+                    android:layout_toStartOf="@+id/sb_show_marker"
+                    android:text="@string/label_room_show_marker" />
+
+                <com.tongxin.caihong.view.SwitchButton
+                    android:id="@+id/sb_show_marker"
+                    style="@style/IMTbleLine_ArrowBtn"
+                    android:clickable="false"
+                    app:sb_background="@color/app_white"
+                    app:sb_checked_color="@color/main_color"
+                    app:sb_effect_duration="100"
+                    app:sb_shadow_radius="4dp"
+                    app:sb_show_indicator="false" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:paddingLeft="15dp"
+                android:paddingTop="5dp"
+                android:paddingRight="9dp"
+                android:paddingBottom="5dp"
+                android:text="@string/muc_show_marker"
+                android:textColor="@color/Grey_500"
+                android:textSize="@dimen/two_level_content" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

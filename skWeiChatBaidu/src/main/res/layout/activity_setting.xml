@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/normal_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/a_view_actionbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@drawable/common_divider"
+                android:orientation="vertical"
+                android:showDividers="middle">
+
+                <RelativeLayout
+                    android:id="@+id/account_rl"
+                    style="@style/IMTbleLine">
+
+                    <TextView
+                        android:id="@+id/account_text"
+                        style="@style/IMTbleLine_TextKey"
+                        android:text="@string/switch_account" />
+
+                    <TextView
+                        style="@style/IMTbleLine_TextValue"
+                        android:layout_toLeftOf="@+id/account_arrow_img"
+                        android:layout_toRightOf="@+id/account_text" />
+
+                    <ImageView
+                        android:id="@+id/account_arrow_img"
+                        style="@style/IMTbleLine_ArrowImg"
+                        android:contentDescription="@string/app_name" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/clear_cache_rl"
+                    style="@style/IMTbleLine">
+
+                    <TextView
+                        android:id="@+id/cache_text"
+                        style="@style/IMTbleLine_TextKey"
+                        android:text="@string/clean_cache" />
+
+                    <TextView
+                        android:id="@+id/cache_tv"
+                        style="@style/IMTbleLine_TextValue"
+                        android:layout_toLeftOf="@+id/cache_arrow_img"
+                        android:layout_toRightOf="@+id/cache_text" />
+
+                    <ImageView
+                        android:id="@+id/cache_arrow_img"
+                        style="@style/IMTbleLine_ArrowImg"
+                        android:contentDescription="@string/app_name" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_cencel_chat"
+                    style="@style/IMTbleLine">
+
+                    <TextView
+                        android:id="@+id/tv_cencel_chat"
+                        style="@style/IMTbleLine_TextKey"
+                        android:text="@string/clean_all_chat_history" />
+
+                    <ImageView
+                        style="@style/IMTbleLine_ArrowImg"
+                        android:contentDescription="@string/app_name" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_backup_chat"
+                    style="@style/IMTbleLine">
+
+                    <TextView
+                        android:id="@+id/tv_backup_chat"
+                        style="@style/IMTbleLine_TextKey"
+                        android:text="@string/backup_chat_history" />
+
+                    <ImageView
+                        style="@style/IMTbleLine_ArrowImg"
+                        android:contentDescription="@string/app_name" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/change_password_rl"
+                style="@style/IMTbleLine"
+                android:layout_marginTop="9dp">
+
+                <TextView
+                    android:id="@+id/passwoedtv"
+                    style="@style/IMTbleLine_TextKey"
+                    android:text="@string/change_password" />
+
+                <ImageView
+                    style="@style/IMTbleLine_ArrowImg"
+                    android:contentDescription="@string/app_name" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@drawable/common_divider"
+                android:orientation="vertical"
+                android:showDividers="middle">
+
+                <RelativeLayout
+                    android:id="@+id/switch_language"
+                    style="@style/IMTbleLine"
+                    android:layout_marginTop="9dp">
+
+                    <TextView
+                        android:id="@+id/switch_language_tv"
+                        style="@style/IMTbleLine_TextKey"
+                        android:text="@string/switch_language" />
+
+                    <TextView
+                        android:id="@+id/tv_language_scan"
+                        style="@style/IMTbleLine_TextValue"
+                        android:layout_toLeftOf="@+id/ivArrow1"
+                        android:layout_toRightOf="@+id/switch_language_tv"
+                        android:text="" />
+
+                    <ImageView
+                        android:id="@+id/ivArrow1"
+                        style="@style/IMTbleLine_ArrowImg"
+                        android:contentDescription="@string/app_name" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/skin_rl"
+                    style="@style/IMTbleLine"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/switch_skin_tv"
+                        style="@style/IMTbleLine_TextKey"
+                        android:text="@string/change_skin" />
+
+                    <TextView
+                        android:id="@+id/tv_skin_scan"
+                        style="@style/IMTbleLine_TextValue"
+                        android:layout_toLeftOf="@+id/ivArrow2"
+                        android:layout_toRightOf="@+id/switch_skin_tv"
+                        android:text="" />
+
+                    <ImageView
+                        android:id="@+id/ivArrow2"
+                        style="@style/IMTbleLine_ArrowImg"
+                        android:contentDescription="@string/app_name" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@drawable/common_divider"
+                android:orientation="vertical"
+                android:showDividers="middle">
+
+                <RelativeLayout
+                    android:id="@+id/chat_font_size_rl"
+                    style="@style/IMTbleLine"
+                    android:layout_marginTop="9dp"
+                    android:visibility="visible">
+
+                    <TextView
+                        style="@style/IMTbleLine_TextKey"
+                        android:text="@string/chat_font" />
+
+                    <ImageView
+                        style="@style/IMTbleLine_ArrowImg"
+                        android:contentDescription="@string/app_name" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/send_gMessage_rl"
+                    style="@style/IMTbleLine"
+                    android:visibility="visible">
+
+                    <TextView
+                        style="@style/IMTbleLine_TextKey"
+                        android:text="@string/mass_messaging" />
+
+                    <ImageView
+                        style="@style/IMTbleLine_ArrowImg"
+                        android:contentDescription="@string/app_name" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@drawable/common_divider"
+                android:orientation="vertical"
+                android:showDividers="middle">
+
+                <RelativeLayout
+                    android:id="@+id/privacy_settting_rl"
+                    style="@style/IMTbleLine"
+                    android:visibility="gone"
+                    android:layout_marginTop="9dp">
+
+                    <TextView
+                        android:id="@+id/privacySetting_text"
+                        style="@style/IMTbleLine_TextKey"
+                        android:text="@string/private_settings" />
+
+                    <ImageView
+                        style="@style/IMTbleLine_ArrowImg"
+                        android:contentDescription="@string/app_name" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/black"
+                    style="@style/IMTbleLine">
+
+                    <TextView
+                        style="@style/IMTbleLine_TextKey"
+                        android:text="@string/black_list" />
+
+                    <ImageView
+                        style="@style/IMTbleLine_ArrowImg"
+                        android:contentDescription="@string/app_name" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/disturb_setting_rl"
+                    style="@style/IMTbleLine">
+
+                    <TextView
+                        style="@style/IMTbleLine_TextKey"
+                        android:text="@string/disturb_settings" />
+
+                    <ImageView
+                        style="@style/IMTbleLine_ArrowImg"
+                        android:contentDescription="@string/app_name" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/secure_setting_rl"
+                    android:visibility="gone"
+                    style="@style/IMTbleLine">
+
+                    <TextView
+                        android:id="@+id/secureSetting_text"
+                        style="@style/IMTbleLine_TextKey"
+                        android:text="@string/secure_settings" />
+
+                    <ImageView
+                        style="@style/IMTbleLine_ArrowImg"
+                        android:contentDescription="@string/app_name" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/bind_account_rl"
+                    style="@style/IMTbleLine">
+
+                    <TextView
+                        style="@style/IMTbleLine_TextKey"
+                        android:text="@string/bind_account_set" />
+
+                    <ImageView
+                        style="@style/IMTbleLine_ArrowImg"
+                        android:contentDescription="@string/app_name" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/tuisongmsg"
+                    style="@style/IMTbleLine">
+
+                    <TextView
+                        style="@style/IMTbleLine_TextKey_End_Btn"
+                        android:layout_toStartOf="@+id/ivArrow0"
+                        android:text="@string/allow_exit_app_revice" />
+
+                    <ImageView
+                        android:id="@+id/ivArrow0"
+                        style="@style/IMTbleLine_ArrowImg"
+                        android:contentDescription="@string/app_name" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/about_us_rl"
+                style="@style/IMTbleLine"
+                android:layout_marginTop="9dp"
+                android:layout_marginBottom="@dimen/dp10"
+                android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/aboutUs_text"
+                    style="@style/IMTbleLine_TextKey"
+                    android:text="@string/about_me" />
+
+                <ImageView
+                    style="@style/IMTbleLine_ArrowImg"
+                    android:contentDescription="@string/app_name" />
+
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/exit_btn"
+                style="@style/BossGreenBtn"
+                android:text="@string/exit_current_account" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

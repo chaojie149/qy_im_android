@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/llQuery"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/normal_bg"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingStart="@dimen/margin_screen_old"
+    android:paddingTop="10dp"
+    android:paddingEnd="@dimen/margin_screen_old"
+    android:paddingBottom="13dp">
+
+    <TextView
+        android:id="@+id/tvStartTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/webox_record_query_item_bg"
+        android:gravity="center"
+        android:padding="6dp"
+        android:textColor="@color/text_value"
+        android:textSize="16sp"
+        tools:text="2020-06-20" />
+
+    <View
+        android:layout_width="15dp"
+        android:layout_height="0dp" />
+
+    <TextView
+        android:id="@+id/tvEndTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/webox_record_query_item_bg"
+        android:gravity="center"
+        android:padding="6dp"
+        android:textColor="@color/text_value"
+        android:textSize="16sp"
+        tools:text="2020-06-28" />
+
+    <View
+        android:layout_width="12dp"
+        android:layout_height="0dp" />
+
+    <ImageView
+        android:id="@+id/ivQuery"
+        android:layout_width="42dp"
+        android:layout_height="33dp"
+        android:background="@drawable/webox_record_query_item_bg"
+        android:scaleType="center"
+        android:src="@mipmap/search_icon"
+        android:tint="@color/gray" />
+</LinearLayout>
+

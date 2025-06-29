@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center">
+
+    <RelativeLayout
+        android:id="@+id/rl_sign"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/sign_redpackt"
+        android:visibility="visible">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@mipmap/sign_red_monty" />
+
+        <Button
+            android:id="@+id/bt_sign"
+            android:layout_width="123dp"
+            android:layout_height="35dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="250dp"
+            android:background="@drawable/sign_red_bg"
+            android:text="@string/quick_get"
+            android:textColor="#774300" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_sign_ed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/sign_redpackt_open"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <TextView
+            android:id="@+id/tv_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp80"
+            android:text="@string/money_page"
+            android:textColor="#774300"
+            android:textSize="@dimen/sp_16_text_size" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_money"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="14dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="￥"
+                android:textColor="#fff14f52"
+                android:textSize="21sp" />
+
+            <TextView
+                android:id="@+id/tv_money_sign"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1.88"
+                android:textColor="#fff14f52"
+                android:textSize="37sp" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/bt_withdrawal"
+            android:layout_width="123dp"
+            android:layout_height="35dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="250dp"
+            android:background="@drawable/sign_red_bg"
+            android:text="@string/quick_get_out"
+            android:textColor="#774300" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/iv_close1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_sign"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dp10"
+        android:src="@mipmap/sign_close_bg" />
+
+    <ImageView
+        android:id="@+id/iv_close2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_sign_ed"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dp10"
+        android:src="@mipmap/sign_close_bg"
+        android:visibility="gone" />
+
+</RelativeLayout>

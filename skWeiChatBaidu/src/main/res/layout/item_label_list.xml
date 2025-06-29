@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/list_selector_background_ripple"
+    android:orientation="vertical"
+    android:paddingStart="@dimen/margin_screen_old"
+    android:paddingTop="9dp"
+    android:paddingEnd="@dimen/margin_screen_old"
+    android:paddingBottom="9dp">
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        tools:text="家人(3）" />
+
+    <TextView
+        android:id="@+id/tvContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textColor="#ff9d9fa7"
+        android:textSize="13sp"
+        tools:text="乐迪，早安英文，口语粉碎机，再见杰克，痛仰乐..." />
+
+</LinearLayout>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/a_view_actionbar" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="@dimen/margin_screen_old"
+        android:text="@string/input_password"
+        android:textColor="@color/black_new_title"
+        android:textSize="26sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="38dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingStart="30dp"
+        android:paddingEnd="30dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/etPassword"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:digits="@string/digits_password"
+                    android:hint="@string/please_input_password"
+                    android:inputType="textPassword"
+                    android:padding="2dp"
+                    android:textSize="@dimen/sp_15_text_size" />
+
+                <ToggleButton
+                    android:id="@+id/tbEye"
+                    style="@style/PasswordEye" />
+
+            </LinearLayout>
+
+            <View
+                style="@style/View_Line"
+                android:layout_marginTop="8dp"
+                android:background="@color/Grey_200" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llResetPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_screen_old"
+        android:paddingStart="30dp"
+        android:paddingEnd="30dp"
+        android:visibility="visible">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/forgot_password"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_14_text_size" />
+
+        <TextView
+            android:id="@+id/tvResetPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/click_reset"
+            android:textSize="@dimen/sp_14_text_size" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:gravity="top|center_horizontal"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btnLogin"
+            style="@style/BossGreenBtn"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="0dp"
+            android:text="@string/login" />
+
+        <TextView
+            android:id="@+id/tvSMSLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/btn_phone_auth_login_sms"
+            android:textSize="@dimen/sp_14_text_size"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+</LinearLayout>

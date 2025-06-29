@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/normal_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/a_view_actionbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@drawable/common_divider"
+        android:orientation="vertical"
+        android:showDividers="middle">
+
+        <RelativeLayout style="@style/IMTbleLine">
+
+            <TextView
+                android:id="@+id/tvBanToFriend"
+                style="@style/IMTbleLine_TextKey"
+                android:text="@string/ban_to_male" />
+
+            <com.tongxin.caihong.view.SwitchButton
+                android:id="@+id/sbBanToFriend"
+                style="@style/IMTbleLine_ArrowBtn"
+                app:sb_background="@color/app_white"
+                app:sb_checked_color="@color/main_color"
+                app:sb_effect_duration="100"
+                app:sb_shadow_radius="4dp"
+                app:sb_show_indicator="false" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            style="@style/IMTbleLine"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/tvBanFromFriend"
+                style="@style/IMTbleLine_TextKey"
+                android:text="@string/ban_from_male" />
+
+            <com.tongxin.caihong.view.SwitchButton
+                android:id="@+id/sbBanFromFriend"
+                style="@style/IMTbleLine_ArrowBtn"
+                app:sb_background="@color/app_white"
+                app:sb_checked_color="@color/main_color"
+                app:sb_effect_duration="100"
+                app:sb_shadow_radius="4dp"
+                app:sb_show_indicator="false" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

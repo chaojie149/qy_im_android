@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/normal_bg"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <include layout="@layout/a_view_actionbar" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="12dp"
+        android:gravity="center"
+        android:text="@string/label_migrate_chat_to_another_device"
+        android:textColor="@color/black"
+        android:textSize="13sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="12dp"
+        android:gravity="center"
+        android:text="@string/tip_migrate_chat_need_wifi"
+        android:textSize="11sp" />
+
+    <Button
+        android:id="@+id/btnSelectChat"
+        style="@style/BossGreenBtn"
+        android:layout_marginTop="80dp"
+        android:text="@string/btn_select_chat"
+        android:visibility="visible" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btnCleanEncryptChatUser"
+            style="@style/BossGreenBtn"
+            android:text="清空所有同事会话和加密会话"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/btnCleanEncryptChatGroup"
+            style="@style/BossGreenBtn"
+            android:text="清空同事群，解散加密客户群"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:id="@+id/vBottomLeft"
+            android:layout_width="80dp"
+            android:layout_height="80dp" />
+
+        <View
+            android:id="@+id/vBottomRight"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignParentEnd="true" />
+
+    </RelativeLayout>
+
+</LinearLayout>

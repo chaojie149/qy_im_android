@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="SplashTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@drawable/logo_bg</item>
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <!--适配Android P刘海屏-->
+        <item name="android:windowLayoutInDisplayCutoutMode">shortEdges</item>
+    </style>
+    <!-- 安卓8不允许固定方向的全屏透明页面，安卓9又允许了， -->
+    <style name="AppTheme_Sliding" parent="AppBaseTheme">
+        <item name="android:windowBackground">@android:color/transparent</item>
+
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+</resources>

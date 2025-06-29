@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fillet_dialog_bg"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/margin_screen_old"
+        android:textColor="@color/black_new_title"
+        android:textSize="@dimen/sp_16_text_size"
+        tools:text="@string/create_room" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="15dp"
+        android:alpha="0.7"
+        android:background="@drawable/grop_dialog_bg"
+        android:orientation="vertical"
+        android:paddingStart="7dp"
+        android:paddingEnd="7dp">
+
+        <com.tongxin.caihong.view.InputLimitEditText
+            android:id="@+id/etContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@null"
+            android:gravity="top"
+            android:maxLines="6"
+            android:padding="5dp"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            tools:hint="@string/please_input_nicname" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/read_rl"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginTop="10dp"
+        android:padding="8dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/is_read_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/display_read_number"
+            android:textColor="@color/grey"
+            android:textSize="@dimen/me_title_size" />
+
+        <com.tongxin.caihong.view.SwitchButton
+            android:id="@+id/switch_read"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            app:sb_background="@color/app_white"
+            app:sb_checked_color="@color/main_color"
+            app:sb_effect_duration="100"
+            app:sb_shadow_radius="4dp"
+            app:sb_show_indicator="false" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/public_rl"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginTop="10dp"
+        android:padding="8dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/is_show_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/private_group"
+            android:textColor="@color/grey"
+            android:textSize="@dimen/me_title_size" />
+
+        <com.tongxin.caihong.view.SwitchButton
+            android:id="@+id/switch_look"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            app:sb_background="@color/app_white"
+            app:sb_checked="true"
+            app:sb_checked_color="@color/main_color"
+            app:sb_effect_duration="100"
+            app:sb_shadow_radius="4dp"
+            app:sb_show_indicator="false" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/verify_rl"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginTop="10dp"
+        android:padding="8dp"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/group_verification"
+            android:textColor="@color/grey"
+            android:textSize="@dimen/me_title_size" />
+
+        <com.tongxin.caihong.view.SwitchButton
+            android:id="@+id/switch_verify"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            app:sb_background="@color/app_white"
+            app:sb_checked_color="@color/main_color"
+            app:sb_effect_duration="100"
+            app:sb_shadow_radius="4dp"
+            app:sb_show_indicator="false" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/show_member_rl"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginTop="10dp"
+        android:padding="8dp"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/display_member"
+            android:textColor="@color/grey"
+            android:textSize="@dimen/me_title_size" />
+
+        <com.tongxin.caihong.view.SwitchButton
+            android:id="@+id/switch_show_member"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            app:sb_background="@color/app_white"
+            app:sb_checked="true"
+            app:sb_checked_color="@color/main_color"
+            app:sb_effect_duration="100"
+            app:sb_shadow_radius="4dp"
+            app:sb_show_indicator="false" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/send_card_rl"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginTop="10dp"
+        android:padding="8dp"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/member_chat_privately"
+            android:textColor="@color/grey"
+            android:textSize="@dimen/me_title_size" />
+
+        <com.tongxin.caihong.view.SwitchButton
+            android:id="@+id/switch_send_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            app:sb_background="@color/app_white"
+            app:sb_checked="true"
+            app:sb_checked_color="@color/main_color"
+            app:sb_effect_duration="100"
+            app:sb_shadow_radius="4dp"
+            app:sb_show_indicator="false" />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btnSure"
+        style="@style/BossGreenBtn"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="1dp"
+        android:text="@string/sure" />
+
+</LinearLayout>

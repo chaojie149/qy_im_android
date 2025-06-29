@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/pop_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/fillet_dialog_bg"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/margin_screen_old">
+
+            <TextView
+                android:id="@+id/tv_instant_popuwindow_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/determine_send_to"
+                android:textColor="@color/black"
+                android:textSize="@dimen/one_level_title" />
+
+            <com.tongxin.caihong.view.HorizontalListView
+                android:id="@+id/horizontal_list_view"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginTop="@dimen/margin_screen_old"
+                tools:listitem="@layout/item_message_instantconfirm_new" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:background="@color/pop_line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/btn_cancle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/dialog_select_frame_left_selector_background_ripple"
+                android:gravity="center"
+                android:padding="12dp"
+                android:text="@string/cancel"
+                android:textColor="@color/black"
+                android:textSize="@dimen/one_level_title" />
+
+            <View
+                android:layout_width="0.1dp"
+                android:layout_height="match_parent"
+                android:background="@color/pop_line" />
+
+            <TextView
+                android:id="@+id/btn_send"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/dialog_select_frame_right_selector_background_ripple"
+                android:gravity="center"
+                android:padding="12dp"
+                android:text="@string/sure"
+                android:textColor="@color/main_color"
+                android:textSize="@dimen/one_level_title" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

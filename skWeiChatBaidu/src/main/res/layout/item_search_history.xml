@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/IMTbleLine">
+
+    <TextView
+        android:id="@+id/tvSearchHistory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:drawableStart="@mipmap/applet_search_key_history_icon"
+        android:drawablePadding="12dp"
+        android:gravity="center"
+        android:text="@string/example_name"
+        android:textColor="@color/black"
+        android:textSize="@dimen/one_level_title" />
+
+    <ImageView
+        android:id="@+id/ivDelete"
+        android:layout_width="17dp"
+        android:layout_height="17dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:src="@mipmap/ic_delete_search_key" />
+
+</RelativeLayout>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/live_common_bg"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingTop="@dimen/margin_screen_old"
+        android:paddingBottom="@dimen/margin_screen_old"
+        android:text="@string/mall_live_more"
+        android:textColor="#FF111111"
+        android:textSize="@dimen/sp_16_text_size"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="20dp"
+        android:paddingBottom="28dp">
+
+        <TextView
+            android:id="@+id/tvSwitchCamera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="22dp"
+            android:drawableTop="@mipmap/ic_live_switch_camera"
+            android:drawablePadding="8dp"
+            android:text="@string/mall_live_switch_camera"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_12_text_size" />
+
+        <TextView
+            android:id="@+id/tvComment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="56dp"
+            android:drawableTop="@mipmap/ic_live_comment"
+            android:drawablePadding="8dp"
+            android:text="@string/comment"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_12_text_size" />
+
+        <TextView
+            android:id="@+id/tvShare"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="56dp"
+            android:drawableTop="@mipmap/ic_live_share"
+            android:drawablePadding="8dp"
+            android:text="@string/trill_share"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_12_text_size" />
+
+    </LinearLayout>
+
+</LinearLayout>

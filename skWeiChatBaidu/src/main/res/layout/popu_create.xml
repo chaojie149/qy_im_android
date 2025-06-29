@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/pop_layout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/kx_message_pop_bg"
+    android:divider="@drawable/popu_message_divider"
+    android:orientation="vertical"
+    android:showDividers="middle">
+
+    <Button
+        android:id="@+id/btn_add_son_company"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:drawableLeft="@mipmap/add_partment_icon"
+        android:drawablePadding="8dp"
+        android:gravity="start|center_vertical"
+        android:paddingLeft="18dp"
+        android:paddingTop="15dp"
+        android:paddingRight="18dp"
+        android:paddingBottom="15dp"
+        android:text="@string/new_company"
+        android:textColor="@color/white"
+        android:textSize="@dimen/pop_window" />
+
+    <Button
+        android:id="@+id/btn_search_company"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:drawableLeft="@mipmap/company_search_icon"
+        android:drawablePadding="8dp"
+        android:gravity="start|center_vertical"
+        android:paddingLeft="18dp"
+        android:paddingTop="15dp"
+        android:paddingRight="18dp"
+        android:paddingBottom="15dp"
+        android:text="@string/search_company"
+        android:textColor="@color/white"
+        android:textSize="@dimen/pop_window" />
+
+</LinearLayout>

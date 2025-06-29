@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/normal_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/a_view_actionbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@drawable/common_divider"
+        android:orientation="vertical"
+        android:showDividers="middle">
+
+        <RelativeLayout
+            style="@style/IMTbleLine"
+            android:layout_marginTop="9dp">
+
+            <TextView
+                style="@style/IMTbleLine_TextKey_End_Btn"
+                android:layout_toStartOf="@+id/sbDisturb"
+                android:text="@string/disturb_settings" />
+
+            <com.tongxin.caihong.view.SwitchButton
+                android:id="@+id/sbDisturb"
+                style="@style/IMTbleLine_ArrowBtn"
+                app:sb_background="@color/app_white"
+                app:sb_checked_color="@color/main_color"
+                app:sb_enable_effect="false"
+                app:sb_shadow_radius="4dp"
+                app:sb_show_indicator="false" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/llDisturbTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@drawable/common_divider"
+            android:orientation="vertical"
+            android:showDividers="middle">
+
+            <RelativeLayout
+                android:id="@+id/rlStartTime"
+                style="@style/IMTbleLine"
+                android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/tvLabelStartTime"
+                    style="@style/IMTbleLine_TextKey"
+                    android:text="@string/disturb_start_time" />
+
+                <TextView
+                    android:id="@+id/tvStartTime"
+                    style="@style/IMTbleLine_TextValue"
+                    android:layout_toLeftOf="@+id/iv1"
+                    android:layout_toRightOf="@+id/tvLabelStartTime"
+                    android:text="23:00" />
+
+                <ImageView
+                    android:id="@+id/iv1"
+                    style="@style/IMTbleLine_ArrowImg"
+                    android:contentDescription="@string/app_name" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlEndTime"
+                style="@style/IMTbleLine"
+                android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/tvLabelEndTime"
+                    style="@style/IMTbleLine_TextKey"
+                    android:text="@string/disturb_end_time" />
+
+                <TextView
+                    android:id="@+id/tvEndTime"
+                    style="@style/IMTbleLine_TextValue"
+                    android:layout_toLeftOf="@+id/iv2"
+                    android:layout_toRightOf="@+id/tvLabelEndTime"
+                    android:text="08:00" />
+
+                <ImageView
+                    android:id="@+id/iv2"
+                    style="@style/IMTbleLine_ArrowImg"
+                    android:contentDescription="@string/app_name" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

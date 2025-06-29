@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tvMan"
+        android:layout_width="46dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_sex_man"
+        android:gravity="center"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:text="@string/sex_man"
+        android:textColor="@color/team_text_sex_man"
+        android:textSize="@dimen/sp_14_text_size" />
+
+    <TextView
+        android:id="@+id/tvWoman"
+        android:layout_width="46dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_sex_woman_not_selected"
+        android:gravity="center"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:text="@string/sex_woman"
+        android:textColor="@color/team_text_sex_not_selected"
+        android:textSize="@dimen/sp_14_text_size" />
+
+</LinearLayout>

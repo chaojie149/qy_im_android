@@ -1,0 +1,100 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/llNotice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#73FFBB00"
+        android:gravity="center_vertical"
+        android:paddingStart="@dimen/margin_screen_old"
+        android:paddingTop="5dp"
+        android:paddingEnd="@dimen/margin_screen_old"
+        android:paddingBottom="5dp"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <ImageView
+            android:id="@+id/ivNoticeTint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_asn_tc" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:text="@string/notices"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_13_text_size" />
+
+        <com.tongxin.caihong.view.MarqueeTextView
+            android:id="@+id/tvNotice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:marqueeRepeatLimit="-1"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_13_text_size"
+            tools:text="重要提醒" />
+
+        <ImageView
+            android:id="@+id/ivClose"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="4dp"
+            android:src="@drawable/icon_close"
+            android:tint="@color/black" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/net_error_ll"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="#fedbd9"
+        android:gravity="center_vertical"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:src="@drawable/net_error" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:layout_weight="1"
+            android:gravity="left|center_vertical"
+            android:text="@string/tip_network_error"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginRight="15dp"
+            android:src="@mipmap/right_arrow_icon" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_no_nearly_msg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/no_data_for_the_time_being"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
+</LinearLayout>

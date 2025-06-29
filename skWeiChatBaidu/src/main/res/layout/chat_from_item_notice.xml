@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="@dimen/chat_item_padding_left"
+    android:paddingTop="@dimen/chat_item_padding_top"
+    android:paddingRight="@dimen/chat_item_padding_right"
+    android:paddingBottom="@dimen/chat_item_padding_bottom">
+
+    <TextView
+        android:id="@+id/time_tv"
+        style="@style/ChattingUISystem"
+        android:visibility="gone" />
+
+    <com.tongxin.caihong.view.HeadView
+        android:id="@+id/chat_head_iv"
+        android:layout_width="@dimen/chat_head_size"
+        android:layout_height="@dimen/chat_head_size"
+        android:layout_below="@id/time_tv"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="@dimen/chat_head_left"
+        android:layout_marginTop="@dimen/chat_head_top"
+        android:layout_marginEnd="@dimen/chat_head_right"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/avatar_normal" />
+
+    <TextView
+        android:id="@+id/nick_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/time_tv"
+        android:layout_marginTop="@dimen/chat_head_top"
+        android:layout_toLeftOf="@id/chat_head_iv"
+        android:text="123123123"
+        android:textSize="@dimen/SmallerTextSize"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/chat_warp_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nick_name"
+        android:layout_marginTop="@dimen/chat_head_top"
+        android:layout_toLeftOf="@+id/chat_head_iv"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="@dimen/chat_form_info_width"
+            android:layout_height="wrap_content"
+            android:background="@drawable/chat_bubble_whrite_right_icon"
+            android:orientation="vertical"
+            android:paddingStart="12dp"
+            android:paddingTop="10dp"
+            android:paddingEnd="14dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/ivNotice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ic_asn_tc" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="@string/group_bulletin"
+                    android:textColor="@color/text_value"
+                    android:textSize="@dimen/sp_14_text_size" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvNotice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:ellipsize="end"
+                android:maxLines="7"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_16_text_size"
+                tools:text="亲，欢迎您的大驾光临，谢谢惠顾" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="12dp"
+                android:background="#FFF8F8F8" />
+
+            <TextView
+                android:id="@+id/tvLook"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingTop="8dp"
+                android:paddingBottom="6dp"
+                android:text="@string/look_over"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_14_text_size" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <include layout="@layout/view_holder_state_from" />
+
+    <CheckBox
+        android:id="@+id/chat_msc"
+        style="@style/CustomCheckBoxTheme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/chat_warp_view"
+        android:layout_marginTop="@dimen/dp10"
+        android:clickable="false"
+        android:visibility="gone" />
+
+</RelativeLayout>

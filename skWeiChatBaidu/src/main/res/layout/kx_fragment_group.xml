@@ -1,0 +1,107 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:srlEnableAutoLoadMore="false"
+        app:srlEnableLoadMore="false">
+
+        <com.tongxin.caihong.view.PullRefreshHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            android:id="@+id/innerRefresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:srlEnableAutoLoadMore="false"
+            app:srlEnableLoadMore="false">
+
+            <com.tongxin.caihong.view.SearchHeader
+                android:id="@+id/shSearch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/search_group"
+                android:paddingTop="7dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:nestedScrollingEnabled="true"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/llIndicator"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_marginStart="@dimen/margin_screen_old"
+                        android:layout_marginTop="14dp"
+                        android:background="@drawable/bubble_pager_indicator_bg"
+                        android:layout_marginEnd="@dimen/margin_screen_old"
+                        android:layout_marginBottom="@dimen/margin_screen_old"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="2dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/bubble_pager_indicator_selected_bg"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            tools:text="我创建的群"
+                            android:textColor="@color/black"
+                            android:textSize="13sp" />
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="12dp"
+                            android:visibility="gone"
+                            android:background="#DBDBDD" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            tools:text="我创建的群"
+                            android:textColor="@color/black"
+                            android:textSize="13sp" />
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="12dp"
+                            android:background="#DBDBDD" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            tools:text="我创建的群"
+                            android:textColor="@color/black"
+                            android:textSize="13sp" />
+
+                    </LinearLayout>
+
+                    <com.tongxin.caihong.view.NoScrollViewPager
+                        android:id="@+id/vpPlayGroup"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </LinearLayout>
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+
+</LinearLayout>

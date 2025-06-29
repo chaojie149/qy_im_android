@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="-20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/ic_live_my_live_room_bg"
+        android:orientation="horizontal">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/ivLiveCover"
+            android:layout_width="92dp"
+            android:layout_height="92dp"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="28dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/logo_bg"
+            app:riv_corner_radius="5dp" />
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="31dp"
+            android:layout_marginBottom="28dp"
+            android:layout_weight="1"
+            android:paddingStart="12dp">
+
+            <LinearLayout
+                android:id="@+id/llLiveItemTop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvLiveEndFlag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/live_end_live"
+                    android:paddingStart="3dp"
+                    android:paddingEnd="3dp"
+                    android:text="@string/live_end"
+                    android:textColor="@color/white"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/tvLiveTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="6dp"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:textColor="#FF111111"
+                    android:textSize="@dimen/sp_16_text_size"
+                    android:textStyle="bold"
+                    tools:text="颜色的爆炸混合" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llLiveItemMiddle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/llLiveItemTop"
+                android:layout_marginTop="6dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/mall_live_time"
+                    android:textColor="@color/text_black"
+                    android:textSize="@dimen/sp_13_text_size" />
+
+                <com.tongxin.caihong.view.MarqueeTextView
+                    android:id="@+id/tvLiveTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:ellipsize="marquee"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:singleLine="true"
+                    android:textColor="@color/text_black"
+                    android:textSize="@dimen/sp_13_text_size"
+                    tools:text="1月7日 17:12 - 1月7日 18:23" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/llLiveItemMiddle"
+                android:layout_marginTop="22dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/mall_live_look"
+                    android:textColor="#FF888888"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tvLiveLookValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:text="5.2w"
+                    android:textColor="#FFBBBBBB"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="@string/trill_share"
+                    android:textColor="#FF888888"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tvLiveShareValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:text="1314"
+                    android:textColor="#FFBBBBBB"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="@string/mall_live_gift_money_total"
+                    android:textColor="#FF888888"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tvLiveGiftMoneyValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="520"
+                    android:textColor="#FFBBBBBB"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/ivLiveMore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="28dp"
+            android:src="@mipmap/set_icon" />
+
+    </LinearLayout>
+
+</LinearLayout>

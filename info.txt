@@ -1,0 +1,9 @@
+软件名称=固友
+公司名称=固友科技有限责任公司
+apirul=www.juziyule.org:8092/config
+apiKey=kangni
+
+32位: 78c50773f4ba2549bfccd5f5672fe5d9
+MD5: 78:C5:07:73:F4:BA:25:49:BF:CC:D5:F5:67:2F:E5:D9
+SHA1: 40:5D:98:27:AB:5B:C5:35:E3:E4:9B:0C:29:F4:DF:6B:B9:58:40:1B
+SHA-256: FE:A1:4B:5C:E6:7D:03:E3:88:3C:34:C6:04:20:69:97:60:B4:E6:1B:75:04:6C:05:69:73:86:3A:1C:DB:B0:6A

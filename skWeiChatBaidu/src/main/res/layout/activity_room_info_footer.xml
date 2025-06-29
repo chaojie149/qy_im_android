@@ -1,0 +1,625 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Grey_50"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_op"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/open_members"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/open_member" />
+
+    </LinearLayout>
+
+    <View
+        style="@style/View_Line"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/room_name_rl"
+        style="@style/IMTbleLine"
+        android:layout_marginTop="8dp">
+
+        <TextView
+            android:id="@+id/room_name_text"
+            style="@style/IMTbleLine_TextKey"
+            android:text="@string/room_name" />
+
+        <TextView
+            android:id="@+id/room_name_tv"
+            style="@style/IMTbleLine_TextValue"
+            android:layout_toLeftOf="@+id/room_name_arrow_img"
+            android:layout_toRightOf="@+id/room_name_text"
+            android:textIsSelectable="false" />
+
+        <ImageView
+            android:id="@+id/room_name_arrow_img"
+            style="@style/IMTbleLine_ArrowImg"
+            android:contentDescription="@string/app_name" />
+
+    </RelativeLayout>
+
+    <View
+        style="@style/View_Line"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/margin_screen_old"
+        android:visibility="visible" />
+
+    <RelativeLayout
+        android:id="@+id/room_desc_rl"
+        style="@style/IMTbleLine">
+
+        <TextView
+            android:id="@+id/room_desc_text"
+            style="@style/IMTbleLine_TextKey"
+            android:text="@string/room_desc" />
+
+        <TextView
+            android:id="@+id/room_desc_tv"
+            style="@style/IMTbleLine_TextValue"
+            android:layout_toLeftOf="@+id/room_desc_arrow_img"
+            android:layout_toRightOf="@+id/room_desc_text"
+            android:textIsSelectable="false" />
+
+        <ImageView
+            android:id="@+id/room_desc_arrow_img"
+            style="@style/IMTbleLine_ArrowImg"
+            android:contentDescription="@string/app_name" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/room_info"
+        style="@style/IMTbleLine"
+        android:visibility="gone">
+
+        <TextView
+            style="@style/IMTbleLine_TextKey"
+            android:text="@string/room_info" />
+
+        <ImageView
+            android:id="@+id/room_info_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/open_member"
+            android:contentDescription="@string/app_name" />
+
+    </RelativeLayout>
+
+    <com.tongxin.caihong.util.ExpandView
+        android:id="@+id/expandView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:visibility="gone" />
+
+    <View
+        style="@style/View_Line"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/margin_screen_old"
+        android:visibility="visible" />
+
+    <RelativeLayout
+        android:id="@+id/member_limit_rl"
+        style="@style/IMTbleLine"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <TextView
+            android:id="@+id/member_limit_text"
+            style="@style/IMTbleLine_TextKey"
+            android:text="@string/member_limit" />
+
+        <TextView
+            android:id="@+id/member_limit_tv"
+            style="@style/IMTbleLine_TextValue"
+            android:layout_toLeftOf="@+id/member_limit_arrow_img"
+            android:layout_toRightOf="@+id/member_limit_text" />
+
+        <ImageView
+            android:id="@+id/member_limit_arrow_img"
+            style="@style/IMTbleLine_ArrowImg"
+            android:contentDescription="@string/app_name" />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/v_member_limit_rl"
+        style="@style/View_Line"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/margin_screen_old"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
+    <RelativeLayout
+        android:id="@+id/room_qrcode"
+        style="@style/IMTbleLine">
+
+        <TextView
+            android:id="@+id/qr_code_tv"
+            style="@style/IMTbleLine_TextKey"
+            android:text="@string/group_qr_code" />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="25dp"
+            android:src="@mipmap/me_qrcode"
+            android:tint="@color/gray" />
+
+        <ImageView
+            style="@style/IMTbleLine_ArrowImg"
+            android:contentDescription="@string/app_name" />
+
+    </RelativeLayout>
+
+    <View
+        style="@style/View_Line"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/margin_screen_old"
+        android:visibility="visible" />
+
+    <RelativeLayout
+        android:id="@+id/notice_rl"
+        style="@style/IMTbleLine">
+
+        <TextView
+            android:id="@+id/notice_text"
+            style="@style/IMTbleLine_TextKey"
+            android:text="@string/notice" />
+
+        <TextView
+            android:id="@+id/notice_tv"
+            style="@style/IMTbleLine_TextValue"
+            android:layout_toLeftOf="@+id/notice_arrow_img"
+            android:layout_toRightOf="@+id/notice_text"
+            android:textIsSelectable="false" />
+
+        <ImageView
+            android:id="@+id/notice_arrow_img"
+            style="@style/IMTbleLine_ArrowImg"
+            android:contentDescription="@string/app_name" />
+
+    </RelativeLayout>
+
+    <View
+        style="@style/View_Line"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/margin_screen_old"
+        android:visibility="visible" />
+
+    <RelativeLayout
+        android:id="@+id/nick_name_rl"
+        style="@style/IMTbleLine">
+
+        <TextView
+            android:id="@+id/nick_name_text"
+            style="@style/IMTbleLine_TextKey"
+            android:text="@string/my_nick_name" />
+
+        <TextView
+            android:id="@+id/nick_name_tv"
+            style="@style/IMTbleLine_TextValue"
+            android:layout_toLeftOf="@+id/nick_name_arrow_img"
+            android:layout_toRightOf="@+id/nick_name_text"
+            android:textIsSelectable="false" />
+
+        <ImageView
+            android:id="@+id/nick_name_arrow_img"
+            style="@style/IMTbleLine_ArrowImg"
+            android:contentDescription="@string/app_name" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/set_background_rl"
+        style="@style/IMTbleLine"
+        android:layout_marginTop="15dp">
+
+        <TextView
+            style="@style/IMTbleLine_TextKey"
+            android:text="@string/chat_background" />
+
+        <ImageView
+            style="@style/IMTbleLine_ArrowImg"
+            android:background="@mipmap/right_arrow_icon" />
+
+    </RelativeLayout>
+
+    <View
+        style="@style/View_Line"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/margin_screen_old"
+        android:visibility="visible" />
+
+    <RelativeLayout
+        android:id="@+id/picture_rl"
+        style="@style/IMTbleLine">
+
+        <TextView
+            android:id="@+id/picture_text"
+            style="@style/IMTbleLine_TextKey"
+            android:text="@string/my_grop_pic" />
+
+        <ImageView
+            android:id="@+id/picture_arrow_img"
+            style="@style/IMTbleLine_ArrowImg"
+            android:contentDescription="@string/app_name" />
+
+    </RelativeLayout>
+
+    <View
+        style="@style/View_Line"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/margin_screen_old"
+        android:visibility="visible" />
+
+    <RelativeLayout
+        android:id="@+id/file_rl"
+        style="@style/IMTbleLine">
+
+        <TextView
+            android:id="@+id/tv_file_name"
+            style="@style/IMTbleLine_TextKey"
+            android:text="@string/group_file" />
+
+        <TextView
+            style="@style/IMTbleLine_TextValue"
+            android:layout_toLeftOf="@+id/iv_file_arrow"
+            android:layout_toRightOf="@+id/tv_file_name" />
+
+        <ImageView
+            android:id="@+id/iv_file_arrow"
+            style="@style/IMTbleLine_ArrowImg"
+            android:contentDescription="@string/app_name" />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/vNotReceivedRed"
+        style="@style/View_Line"
+        android:layout_marginStart="@dimen/margin_screen_old"
+        android:visibility="visible" />
+
+    <RelativeLayout
+        android:id="@+id/rlNotReceivedRed"
+        style="@style/IMTbleLine"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/tvNotReceivedRed"
+            style="@style/IMTbleLine_TextKey"
+            android:text="@string/tip_not_received_red" />
+
+        <TextView
+            style="@style/IMTbleLine_TextValue"
+            android:layout_toLeftOf="@+id/ivNotReceivedRed"
+            android:layout_toRightOf="@+id/tvNotReceivedRed" />
+
+        <ImageView
+            android:id="@+id/ivNotReceivedRed"
+            style="@style/IMTbleLine_ArrowImg"
+            android:contentDescription="@string/app_name" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        style="@style/IMTbleLine"
+        android:layout_marginTop="9dp">
+
+        <TextView
+            style="@style/IMTbleLine_TextKey_End_Btn"
+            android:layout_toStartOf="@+id/sb_auto_translate"
+            android:text="@string/auto_translate" />
+
+        <com.tongxin.caihong.view.SwitchButton
+            android:id="@+id/sb_auto_translate"
+            style="@style/IMTbleLine_ArrowBtn"
+            app:sb_background="@color/app_white"
+            app:sb_checked_color="@color/main_color"
+            app:sb_effect_duration="100"
+            app:sb_shadow_radius="4dp"
+            app:sb_show_indicator="false" />
+
+    </RelativeLayout>
+
+    <View
+        style="@style/View_Line"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/margin_screen_old"
+        android:visibility="visible" />
+
+    <RelativeLayout style="@style/IMTbleLine">
+
+        <TextView
+            style="@style/IMTbleLine_TextKey_End_Btn"
+            android:layout_toStartOf="@+id/sb_top_chat"
+            android:text="@string/pined_session" />
+
+        <com.tongxin.caihong.view.SwitchButton
+            android:id="@+id/sb_top_chat"
+            style="@style/IMTbleLine_ArrowBtn"
+            app:sb_background="@color/app_white"
+            app:sb_checked_color="@color/main_color"
+            app:sb_effect_duration="100"
+            app:sb_shadow_radius="4dp"
+            app:sb_show_indicator="false" />
+
+    </RelativeLayout>
+
+    <View
+        style="@style/View_Line"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/margin_screen_old"
+        android:visibility="visible" />
+
+    <RelativeLayout
+        android:id="@+id/rl_no_disturb"
+        style="@style/IMTbleLine">
+
+        <TextView
+            android:id="@+id/tv_no_disturb"
+            style="@style/IMTbleLine_TextKey_End_Btn"
+            android:layout_toStartOf="@+id/sb_no_disturb"
+            android:text="@string/not_disturb" />
+
+        <com.tongxin.caihong.view.SwitchButton
+            android:id="@+id/sb_no_disturb"
+            style="@style/IMTbleLine_ArrowBtn"
+            app:sb_background="@color/app_white"
+            app:sb_checked_color="@color/main_color"
+            app:sb_effect_duration="100"
+            app:sb_shadow_radius="4dp"
+            app:sb_show_indicator="false" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlHideConversation"
+        style="@style/IMTbleLine">
+
+        <View style="@style/View_Line" />
+
+        <TextView
+            android:id="@+id/tvHideConversation"
+            style="@style/IMTbleLine_TextKey_End_Btn"
+            android:layout_toStartOf="@+id/sbHideConversation"
+            android:text="@string/gain_hide_conversation" />
+
+        <com.tongxin.caihong.view.SwitchButton
+            android:id="@+id/sbHideConversation"
+            style="@style/IMTbleLine_ArrowBtn"
+            android:clickable="false"
+            app:sb_background="@color/app_white"
+            app:sb_checked_color="@color/main_color"
+            app:sb_effect_duration="100"
+            app:sb_shadow_radius="4dp"
+            app:sb_show_indicator="false" />
+
+    </RelativeLayout>
+
+    <View
+        style="@style/View_Line"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/margin_screen_old"
+        android:visibility="visible" />
+
+    <RelativeLayout
+        android:id="@+id/shield_chat_rl"
+        style="@style/IMTbleLine"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/shield_chat_text_title"
+            style="@style/IMTbleLine_TextKey_End_Btn"
+            android:layout_toStartOf="@+id/sb_shield_chat"
+            android:text="@string/shield_chat" />
+
+        <com.tongxin.caihong.view.SwitchButton
+            android:id="@+id/sb_shield_chat"
+            style="@style/IMTbleLine_ArrowBtn"
+            app:sb_background="@color/app_white"
+            app:sb_checked_color="@color/main_color"
+            app:sb_effect_duration="100"
+            app:sb_shadow_radius="4dp"
+            app:sb_show_indicator="false" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@drawable/common_divider"
+        android:orientation="vertical"
+        android:showDividers="middle">
+
+        <RelativeLayout
+            android:id="@+id/chat_history_search"
+            style="@style/IMTbleLine"
+            android:layout_marginTop="9dp">
+
+            <TextView
+                style="@style/IMTbleLine_TextKey"
+                android:text="@string/search_chat_history" />
+
+            <ImageView
+                style="@style/IMTbleLine_ArrowImg"
+                android:contentDescription="@string/app_name" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/msg_save_days_rl"
+            style="@style/IMTbleLine"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/msg_save_days_desc_tv"
+                style="@style/IMTbleLine_TextKey"
+                android:text="@string/message_auto_delete" />
+
+            <TextView
+                android:id="@+id/msg_save_days_tv"
+                style="@style/IMTbleLine_TextValue"
+                android:layout_toStartOf="@+id/msg_save_days_iv"
+                android:layout_toEndOf="@+id/msg_save_days_desc_tv"
+                android:text="@string/one_day" />
+
+            <ImageView
+                android:id="@+id/msg_save_days_iv"
+                style="@style/IMTbleLine_ArrowImg" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/chat_history_empty"
+            style="@style/IMTbleLine">
+
+            <TextView
+                style="@style/IMTbleLine_TextKey"
+                android:text="@string/clean_chat_history" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@drawable/common_divider"
+        android:orientation="vertical"
+        android:showDividers="middle">
+
+        <RelativeLayout
+            android:id="@+id/banned_voice_rl"
+            style="@style/IMTbleLine"
+            android:layout_marginTop="9dp">
+
+            <TextView
+                android:id="@+id/banned_voice_text"
+                style="@style/IMTbleLine_TextKey"
+                android:text="@string/banned_voice" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/banned_all_voice_rl"
+            style="@style/IMTbleLine">
+
+            <TextView
+                style="@style/IMTbleLine_TextKey_End_Btn"
+                android:layout_toStartOf="@+id/sb_banned"
+                android:text="@string/all_banned_voice" />
+
+            <com.tongxin.caihong.view.SwitchButton
+                android:id="@+id/sb_banned"
+                style="@style/IMTbleLine_ArrowBtn"
+                app:sb_background="@color/app_white"
+                app:sb_checked_color="@color/main_color"
+                app:sb_effect_duration="100"
+                app:sb_shadow_radius="4dp"
+                app:sb_show_indicator="false" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_black"
+            style="@style/IMTbleLine">
+
+            <TextView
+                style="@style/IMTbleLine_TextKey"
+                android:text="@string/black_list" />
+
+            <ImageView
+                style="@style/IMTbleLine_ArrowImg"
+                android:contentDescription="@string/app_name" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_manager"
+        style="@style/IMTbleLine"
+        android:layout_marginTop="9dp"
+        android:visibility="gone">
+
+        <TextView
+            style="@style/IMTbleLine_TextKey"
+            android:text="@string/group_management" />
+
+        <ImageView
+            style="@style/IMTbleLine_ArrowImg"
+            android:contentDescription="@string/app_name" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/set_remarks_rl"
+        style="@style/IMTbleLine"
+        android:layout_marginTop="9dp"
+        android:visibility="gone">
+
+        <TextView
+            style="@style/IMTbleLine_TextKey"
+            android:text="@string/set_remark_for_room_member" />
+
+        <ImageView
+            style="@style/IMTbleLine_ArrowImg"
+            android:contentDescription="@string/app_name" />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/recharge_rl"
+        style="@style/IMTbleLine"
+        android:layout_marginTop="9dp"
+        android:visibility="gone">
+
+        <TextView
+            style="@style/IMTbleLine_TextKey"
+            android:text="续费" />
+
+        <ImageView
+            style="@style/IMTbleLine_ArrowImg"
+            android:contentDescription="@string/app_name" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/report_rl"
+        style="@style/IMTbleLine"
+        android:layout_marginTop="9dp">
+
+        <TextView
+            style="@style/IMTbleLine_TextKey"
+            android:text="@string/report" />
+
+        <ImageView
+            style="@style/IMTbleLine_ArrowImg"
+            android:contentDescription="@string/app_name" />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/room_info_quit_btn"
+        style="@style/BossGreenBtn"
+        android:text="@string/exit_group" />
+
+</LinearLayout>

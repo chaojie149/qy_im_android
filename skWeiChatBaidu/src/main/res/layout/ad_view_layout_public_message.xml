@@ -1,0 +1,148 @@
+<com.tongxin.caihong.view.BlockLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_white"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/dp15"
+        android:paddingTop="14dp"
+        android:paddingRight="@dimen/dp15">
+
+        <CheckBox
+            android:id="@+id/check_box"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginEnd="@dimen/dp15"
+            android:button="@drawable/sel_nor_wx2"
+            android:clickable="false"
+            android:focusable="false"
+            android:visibility="gone" />
+
+        <com.tongxin.caihong.view.CircleImageView
+            android:id="@+id/logo"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/app_name"
+            tools:src="@drawable/avatar_normal" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginLeft="@dimen/dp10"
+                android:layout_toStartOf="@+id/llMenu"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:maxLength="8"
+                    android:singleLine="true"
+                    android:textColor="@color/link_nick_name_color"
+                    android:textSize="@dimen/bussic_nick_name_size"
+                    tools:text="昵称" />
+
+                <TextView
+                    android:id="@+id/content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    tools:text="甜出新高度" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llMenu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_weight="1"
+                android:gravity="right|center_vertical"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/menu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ad_message_menu_bg"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingStart="11dp"
+                    android:paddingTop="2dp"
+                    android:paddingEnd="11dp"
+                    android:paddingBottom="2dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ad_label"
+                        android:textColor="#ff7b7b7b"
+                        android:textSize="12sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:src="@mipmap/ad_message_menu_down" />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="65dp"
+        android:paddingTop="11dp"
+        android:paddingRight="15dp">
+
+        <RelativeLayout
+            android:layout_width="120dp"
+            android:layout_height="120dp">
+
+            <fm.jiecao.jcvideoplayer_lib.JCVideoViewbyXuan
+                android:id="@+id/video"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:visibility="gone"
+                tools:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:scaleType="centerCrop"
+                android:visibility="gone"
+                tools:src="@drawable/welcome_bg"
+                tools:visibility="visible" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <View
+        style="@style/View_Line"
+        android:layout_marginTop="14dp" />
+
+</com.tongxin.caihong.view.BlockLinearLayout>

@@ -1,0 +1,570 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/normal_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/a_view_actionbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/msg_sync_days_rl"
+                style="@style/IMTbleLine"
+                android:layout_marginTop="9dp">
+
+                <TextView
+                    android:id="@+id/msg_sync_days_desc_tv"
+                    style="@style/IMTbleLine_TextKey"
+                    android:text="@string/message_roaming_duration" />
+
+                <TextView
+                    android:id="@+id/msg_sync_days_tv"
+                    style="@style/IMTbleLine_TextValue"
+                    android:layout_toStartOf="@+id/msg_sync_days_iv"
+                    android:layout_toEndOf="@+id/msg_sync_days_desc_tv"
+                    android:text="@string/one_day" />
+
+                <ImageView
+                    android:id="@+id/msg_sync_days_iv"
+                    style="@style/IMTbleLine_ArrowImg" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@drawable/common_divider"
+                android:orientation="vertical"
+                android:showDividers="middle">
+
+                <RelativeLayout
+                    android:id="@+id/show_last_login_time_rl"
+                    style="@style/IMTbleLine"
+                    android:layout_marginTop="9dp">
+
+                    <TextView
+                        android:id="@+id/tvLabel0"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/tip_show_last_login_time"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/group_title_size" />
+
+                    <TextView
+                        android:id="@+id/show_last_login_time_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvLabel0"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="16dp"
+                        android:text="@string/privacy_allow_all"
+                        android:textSize="@dimen/two_level_content" />
+
+                    <ImageView
+                        android:id="@+id/ivArrow0"
+                        style="@style/IMTbleLine_ArrowImg" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/show_telephone_rl"
+                    style="@style/IMTbleLine">
+
+                    <TextView
+                        android:id="@+id/tvLabel1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/tip_show_phone"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/group_title_size" />
+
+                    <TextView
+                        android:id="@+id/show_telephone_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvLabel1"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="16dp"
+                        android:text="@string/privacy_allow_all"
+                        android:textSize="@dimen/two_level_content" />
+
+                    <ImageView
+                        android:id="@+id/ivArrow1"
+                        style="@style/IMTbleLine_ArrowImg" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/allow_message_rl"
+                style="@style/IMTbleLine"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tvLabel2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/tip_allow_message"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/one_level_title" />
+
+                <TextView
+                    android:id="@+id/allow_message_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvLabel2"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="16dp"
+                    android:text="@string/privacy_allow_all"
+                    android:textSize="@dimen/one_level_title" />
+
+                <ImageView
+                    android:id="@+id/ivArrow2"
+                    style="@style/IMTbleLine_ArrowImg" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/allow_call_rl"
+                style="@style/IMTbleLine"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tvLabel3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/tip_allow_call"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/one_level_title" />
+
+                <TextView
+                    android:id="@+id/allow_call_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvLabel3"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="16dp"
+                    android:text="@string/privacy_allow_all"
+                    android:textSize="@dimen/one_level_title" />
+
+                <ImageView
+                    android:id="@+id/ivArrow3"
+                    style="@style/IMTbleLine_ArrowImg" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/allow_join_room_rl"
+                style="@style/IMTbleLine"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tvLabel4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/tip_allow_join_room"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/one_level_title" />
+
+                <TextView
+                    android:id="@+id/allow_join_room_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvLabel4"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="16dp"
+                    android:text="@string/privacy_allow_all"
+                    android:textSize="@dimen/one_level_title" />
+
+                <ImageView
+                    android:id="@+id/ivArrow4"
+                    style="@style/IMTbleLine_ArrowImg" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@drawable/common_divider"
+                android:orientation="vertical"
+                android:showDividers="middle">
+
+                <RelativeLayout
+                    style="@style/IMTbleLine"
+                    android:layout_marginTop="9dp">
+
+                    <TextView
+                        android:id="@+id/addFriend_text"
+                        style="@style/IMTbleLine_TextKey_End_Btn"
+                        android:layout_toStartOf="@+id/mSbVerify"
+                        android:text="@string/new_friend_verify" />
+
+                    <com.tongxin.caihong.view.SwitchButton
+                        android:id="@+id/mSbVerify"
+                        style="@style/IMTbleLine_ArrowBtn"
+                        app:sb_background="@color/app_white"
+                        app:sb_checked_color="@color/main_color"
+                        app:sb_effect_duration="100"
+                        app:sb_shadow_radius="4dp"
+                        app:sb_show_indicator="false" />
+
+                </RelativeLayout>
+
+                <RelativeLayout style="@style/IMTbleLine">
+
+                    <TextView
+                        style="@style/IMTbleLine_TextKey_End_Btn"
+                        android:layout_toStartOf="@+id/sbInviteJoinRoomNeedVerify"
+                        android:text="@string/type_invite_join_room_verify" />
+
+                    <com.tongxin.caihong.view.SwitchButton
+                        android:id="@+id/sbInviteJoinRoomNeedVerify"
+                        style="@style/IMTbleLine_ArrowBtn"
+                        app:sb_background="@color/app_white"
+                        app:sb_checked_color="@color/main_color"
+                        app:sb_effect_duration="100"
+                        app:sb_shadow_radius="4dp"
+                        app:sb_show_indicator="false" />
+
+                </RelativeLayout>
+
+                <RelativeLayout style="@style/IMTbleLine">
+
+                    <TextView
+                        style="@style/IMTbleLine_TextKey_End_Btn"
+                        android:layout_toStartOf="@+id/sbHiding"
+                        android:text="@string/type_hiding" />
+
+                    <com.tongxin.caihong.view.SwitchButton
+                        android:id="@+id/sbHiding"
+                        style="@style/IMTbleLine_ArrowBtn"
+                        app:sb_background="@color/app_white"
+                        app:sb_checked_color="@color/main_color"
+                        app:sb_effect_duration="100"
+                        app:sb_shadow_radius="4dp"
+                        app:sb_show_indicator="false" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    style="@style/IMTbleLine"
+                    android:visibility="gone">
+
+                    <TextView
+                        style="@style/IMTbleLine_TextKey_End_Btn"
+                        android:layout_toStartOf="@+id/sbAuthLogin"
+                        android:text="@string/label_need_not_auth_login" />
+
+                    <com.tongxin.caihong.view.SwitchButton
+                        android:id="@+id/sbAuthLogin"
+                        style="@style/IMTbleLine_ArrowBtn"
+                        app:sb_background="@color/app_white"
+                        app:sb_checked_color="@color/main_color"
+                        app:sb_effect_duration="100"
+                        app:sb_shadow_radius="4dp"
+                        app:sb_show_indicator="false" />
+
+                </RelativeLayout>
+
+                <RelativeLayout style="@style/IMTbleLine">
+
+                    <TextView
+                        style="@style/IMTbleLine_TextKey_End_Btn"
+                        android:layout_toStartOf="@+id/sbPhoneSearch"
+                        android:text="@string/tip_allow_phone_search" />
+
+                    <com.tongxin.caihong.view.SwitchButton
+                        android:id="@+id/sbPhoneSearch"
+                        style="@style/IMTbleLine_ArrowBtn"
+                        app:sb_background="@color/app_white"
+                        app:sb_checked_color="@color/main_color"
+                        app:sb_effect_duration="100"
+                        app:sb_shadow_radius="4dp"
+                        app:sb_show_indicator="false" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/allow_sbNameSearch_rl"
+                    style="@style/IMTbleLine">
+
+                    <TextView
+                        style="@style/IMTbleLine_TextKey_End_Btn"
+                        android:layout_toStartOf="@+id/sbNameSearch"
+                        android:text="@string/tip_allow_name_search" />
+
+                    <com.tongxin.caihong.view.SwitchButton
+                        android:id="@+id/sbNameSearch"
+                        style="@style/IMTbleLine_ArrowBtn"
+                        app:sb_background="@color/app_white"
+                        app:sb_checked_color="@color/main_color"
+                        app:sb_effect_duration="100"
+                        app:sb_shadow_radius="4dp"
+                        app:sb_show_indicator="false" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/friend_from_rl"
+                    style="@style/IMTbleLine">
+
+                    <TextView
+                        android:id="@+id/tvLabel5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/tip_friend_from"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/group_title_size" />
+
+                    <TextView
+                        android:id="@+id/friend_from_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvLabel5"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="16dp"
+                        android:layout_toLeftOf="@+id/ivArrow5"
+                        android:text="@string/friend_from_allow_all"
+                        android:textSize="@dimen/two_level_content" />
+
+                    <ImageView
+                        android:id="@+id/ivArrow5"
+                        style="@style/IMTbleLine_ArrowImg" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    style="@style/IMTbleLine"
+                    android:layout_marginTop="9dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/isEncrypt_text"
+                        style="@style/IMTbleLine_TextKey_End_Btn"
+                        android:layout_toStartOf="@+id/mSbEncrypt"
+                        android:text="@string/encrypt_message" />
+
+                    <com.tongxin.caihong.view.SwitchButton
+                        android:id="@+id/mSbEncrypt"
+                        style="@style/IMTbleLine_ArrowBtn"
+                        app:sb_background="@color/app_white"
+                        app:sb_checked_color="@color/main_color"
+                        app:sb_effect_duration="100"
+                        app:sb_shadow_radius="4dp"
+                        app:sb_show_indicator="false" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@drawable/common_divider"
+                android:orientation="vertical"
+                android:showDividers="middle">
+
+                <RelativeLayout
+                    style="@style/IMTbleLine"
+                    android:layout_marginTop="9dp">
+
+                    <TextView
+                        style="@style/IMTbleLine_TextKey_End_Btn"
+                        android:layout_toStartOf="@+id/mSbzhendong"
+                        android:text="@string/turn_on_vibration" />
+
+                    <com.tongxin.caihong.view.SwitchButton
+                        android:id="@+id/mSbzhendong"
+                        style="@style/IMTbleLine_ArrowBtn"
+                        app:sb_background="@color/app_white"
+                        app:sb_checked_color="@color/main_color"
+                        app:sb_effect_duration="100"
+                        app:sb_shadow_radius="4dp"
+                        app:sb_show_indicator="false" />
+
+                </RelativeLayout>
+
+                <RelativeLayout style="@style/IMTbleLine">
+
+                    <TextView
+                        android:id="@+id/tv_input_state"
+                        style="@style/IMTbleLine_TextKey_End_Btn"
+                        android:layout_toStartOf="@+id/mSbInputState"
+                        android:text="@string/know_typing" />
+
+                    <com.tongxin.caihong.view.SwitchButton
+                        android:id="@+id/mSbInputState"
+                        style="@style/IMTbleLine_ArrowBtn"
+                        app:sb_background="@color/app_white"
+                        app:sb_checked_color="@color/main_color"
+                        app:sb_effect_duration="100"
+                        app:sb_shadow_radius="4dp"
+                        app:sb_show_indicator="false" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    style="@style/IMTbleLine"
+                    android:visibility="gone">
+
+                    <TextView
+                        style="@style/IMTbleLine_TextKey_End_Btn"
+                        android:layout_toStartOf="@+id/mSbSlideClearServer"
+                        android:text="@string/slide_clear_server_msg" />
+
+                    <com.tongxin.caihong.view.SwitchButton
+                        android:id="@+id/mSbSlideClearServer"
+                        style="@style/IMTbleLine_ArrowBtn"
+                        app:sb_background="@color/app_white"
+                        app:sb_checked_color="@color/main_color"
+                        app:sb_effect_duration="100"
+                        app:sb_shadow_radius="4dp"
+                        app:sb_show_indicator="false" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@drawable/common_divider"
+                android:orientation="vertical"
+                android:showDividers="middle">
+
+                <RelativeLayout
+                    android:id="@+id/rl_privacy_position"
+                    style="@style/IMTbleLine"
+                    android:layout_marginTop="9dp">
+
+                    <TextView
+                        style="@style/IMTbleLine_TextKey_End_Btn"
+                        android:layout_toStartOf="@+id/mSbPrivacyPosition"
+                        android:text="@string/PrivacyPosition" />
+
+                    <com.tongxin.caihong.view.SwitchButton
+                        android:id="@+id/mSbPrivacyPosition"
+                        style="@style/IMTbleLine_ArrowBtn"
+                        app:sb_background="@color/app_white"
+                        app:sb_checked_color="@color/main_color"
+                        app:sb_effect_duration="100"
+                        app:sb_shadow_radius="4dp"
+                        app:sb_show_indicator="false" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_allow_upload_location"
+                    style="@style/IMTbleLine">
+
+                    <TextView
+                        style="@style/IMTbleLine_TextKey_End_Btn"
+                        android:layout_toStartOf="@+id/mSbAllowUploadLocation"
+                        android:text="@string/allow_upload_location" />
+
+                    <com.tongxin.caihong.view.SwitchButton
+                        android:id="@+id/mSbAllowUploadLocation"
+                        style="@style/IMTbleLine_ArrowBtn"
+                        app:sb_background="@color/app_white"
+                        app:sb_checked_color="@color/main_color"
+                        app:sb_effect_duration="100"
+                        app:sb_shadow_radius="4dp"
+                        app:sb_show_indicator="false" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                style="@style/IMTbleLine"
+                android:layout_marginTop="9dp"
+                android:visibility="gone">
+
+                <TextView
+                    style="@style/IMTbleLine_TextKey_End_Btn"
+                    android:layout_toStartOf="@+id/sb_google_map"
+                    android:text="@string/use_google_map" />
+
+                <com.tongxin.caihong.view.SwitchButton
+                    android:id="@+id/sb_google_map"
+                    style="@style/IMTbleLine_ArrowBtn"
+                    app:sb_background="@color/app_white"
+                    app:sb_checked="false"
+                    app:sb_checked_color="@color/main_color"
+                    app:sb_effect_duration="100"
+                    app:sb_shadow_radius="4dp"
+                    app:sb_show_indicator="false" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                style="@style/IMTbleLine"
+                android:layout_marginTop="9dp">
+
+                <TextView
+                    style="@style/IMTbleLine_TextKey_End_Btn"
+                    android:layout_toStartOf="@+id/mSbSupport"
+                    android:text="@string/multi_device" />
+
+                <com.tongxin.caihong.view.SwitchButton
+                    android:id="@+id/mSbSupport"
+                    style="@style/IMTbleLine_ArrowBtn"
+                    app:sb_background="@color/app_white"
+                    app:sb_checked="true"
+                    app:sb_checked_color="@color/main_color"
+                    app:sb_effect_duration="100"
+                    app:sb_shadow_radius="4dp"
+                    app:sb_show_indicator="false" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                style="@style/IMTbleLine"
+                android:layout_marginTop="9dp">
+
+                <TextView
+                    style="@style/IMTbleLine_TextKey_End_Btn"
+                    android:layout_toStartOf="@+id/mSbKeepLive"
+                    android:text="@string/keeplive" />
+
+                <com.tongxin.caihong.view.SwitchButton
+                    android:id="@+id/mSbKeepLive"
+                    style="@style/IMTbleLine_ArrowBtn"
+                    app:sb_background="@color/app_white"
+                    app:sb_checked="false"
+                    app:sb_checked_color="@color/main_color"
+                    app:sb_effect_duration="100"
+                    app:sb_shadow_radius="4dp"
+                    app:sb_show_indicator="false" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

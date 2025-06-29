@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:clipChildren="false"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/llRoot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clipChildren="false"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="6dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:ignore="UselessParent">
+
+        <RelativeLayout
+            android:id="@+id/rlAction"
+            android:layout_width="44dp"
+            android:layout_height="44dp">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/ivActionImage"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                app:riv_oval="true"
+                tools:ignore="ContentDescription"
+                tools:srcCompat="@mipmap/square_item_life" />
+
+            <TextView
+                android:id="@+id/tvNumber"
+                style="@style/dotNumberRed"
+                android:layout_alignEnd="@id/ivActionImage"
+                android:layout_alignRight="@id/ivActionImage"
+                android:layout_marginTop="-2dp"
+                android:layout_marginEnd="-2dp"
+                android:visibility="gone"
+                tools:text="2"
+                tools:visibility="visible" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tvActionName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            tools:ignore="SmallSp,SpUsage"
+            tools:text="@string/live_chat" />
+
+    </LinearLayout>
+
+</LinearLayout>

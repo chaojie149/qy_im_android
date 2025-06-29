@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/catagory_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingStart="@dimen/margin_screen_old"
+        android:paddingTop="5dp"
+        android:paddingEnd="@dimen/margin_screen_old"
+        android:paddingBottom="5dp"
+        android:textColor="@color/text_value"
+        android:textSize="@dimen/sp_16_text_size"
+        android:visibility="gone"
+        tools:text="A"
+        tools:visibility="visible" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/list_selector_background_ripple"
+        android:minHeight="64dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+
+        <CheckBox
+            android:id="@+id/select_cb"
+            style="@style/CustomCheckBoxTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:clickable="false"
+            android:focusable="false" />
+
+        <com.tongxin.caihong.view.CircleImageView
+            android:id="@+id/select_iv"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="9dp"
+            android:layout_toRightOf="@+id/select_cb"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/avatar_normal" />
+
+        <TextView
+            android:id="@+id/select_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="9dp"
+            android:layout_toRightOf="@+id/select_iv"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="@dimen/one_level_title" />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/view"
+        style="@style/View_Line"
+        android:layout_marginLeft="93dp" />
+
+</LinearLayout>

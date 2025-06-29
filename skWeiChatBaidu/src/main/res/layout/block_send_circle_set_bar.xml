@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:showIn="@layout/activity_send_shuoshuo">
+
+    <RelativeLayout
+        android:id="@+id/rl_see"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="@dimen/dp10"
+        android:background="@color/app_white"
+        android:paddingLeft="10dp">
+
+        <ImageView
+            android:id="@+id/iv_see"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/earth_icon" />
+
+        <TextView
+            android:id="@+id/w_s"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@+id/iv_see"
+            android:gravity="center"
+            android:text="@string/who_can_see"
+            android:textColor="@color/black"
+            android:textSize="@dimen/me_title_size" />
+
+        <TextView
+            android:id="@+id/tv_see"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_toLeftOf="@+id/tip"
+            android:layout_toRightOf="@+id/w_s"
+            android:gravity="right"
+            android:singleLine="true"
+            android:text="@string/publics"
+            android:textColor="@color/grey"
+            android:textSize="@dimen/chat_text_size" />
+
+        <ImageView
+            android:id="@+id/tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@mipmap/right_arrow_icon"
+            android:contentDescription="@string/app_name" />
+
+        <View
+            style="@style/View_Line"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="36dp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_at"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/app_white"
+        android:paddingLeft="10dp">
+
+        <ImageView
+            android:id="@+id/iv_at"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/remind_icon" />
+
+        <TextView
+            android:id="@+id/a_s"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@+id/iv_at"
+            android:gravity="center"
+            android:text="@string/remind_who_to_see"
+            android:textColor="@color/black"
+            android:textSize="@dimen/me_title_size" />
+
+        <TextView
+            android:id="@+id/tv_at"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_toLeftOf="@+id/tip2"
+            android:layout_toRightOf="@+id/a_s"
+            android:gravity="right"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="@color/grey"
+            android:textSize="@dimen/chat_text_size" />
+
+        <ImageView
+            android:id="@+id/tip2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@mipmap/right_arrow_icon"
+            android:contentDescription="@string/app_name" />
+
+        <View
+            style="@style/View_Line"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="36dp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_location"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/app_white"
+        android:paddingLeft="10dp">
+
+        <ImageView
+            android:id="@+id/iv_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/position_icon" />
+
+        <TextView
+            android:id="@+id/tv_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="8dp"
+            android:layout_toLeftOf="@+id/ivArrowLocation"
+            android:layout_toRightOf="@+id/iv_location"
+            android:ellipsize="end"
+            android:gravity="left"
+            android:singleLine="true"
+            android:text="@string/location"
+            android:textColor="@color/black"
+            android:textSize="@dimen/me_title_size" />
+
+        <ImageView
+            android:id="@+id/ivArrowLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@mipmap/right_arrow_icon"
+            android:contentDescription="@string/app_name" />
+
+        <View
+            style="@style/View_Line"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="36dp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_label"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/app_white"
+        android:paddingLeft="10dp">
+
+        <ImageView
+            android:id="@+id/iv_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/label_icon" />
+
+        <TextView
+            android:id="@+id/l_s"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@+id/iv_label"
+            android:gravity="center"
+            android:text="@string/title_select_tag"
+            android:textColor="@color/black"
+            android:textSize="@dimen/me_title_size" />
+
+        <TextView
+            android:id="@+id/tv_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_toLeftOf="@+id/tip3"
+            android:layout_toRightOf="@+id/l_s"
+            android:gravity="right"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="@color/grey"
+            android:textSize="@dimen/chat_text_size" />
+
+        <ImageView
+            android:id="@+id/tip3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@mipmap/right_arrow_icon"
+            android:contentDescription="@string/app_name" />
+
+        <View
+            style="@style/View_Line"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="36dp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_ban"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/app_white"
+        android:paddingLeft="10dp">
+
+        <ImageView
+            android:id="@+id/iv_ban"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/ban_icon" />
+
+        <TextView
+            android:id="@+id/tv_ban"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@+id/iv_ban"
+            android:gravity="center"
+            android:text="@string/ban_pinlun"
+            android:textColor="@color/black"
+            android:textSize="@dimen/me_title_size" />
+
+        <com.tongxin.caihong.view.SwitchButton
+            android:id="@+id/cb_ban"
+            style="@style/IMTbleLine_ArrowBtn"
+            app:sb_background="@color/app_white"
+            app:sb_checked_color="@color/main_color"
+            app:sb_effect_duration="100"
+            app:sb_shadow_radius="4dp"
+            app:sb_show_indicator="false" />
+
+        <View
+            style="@style/View_Line"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="36dp" />
+
+    </RelativeLayout>
+
+</merge>

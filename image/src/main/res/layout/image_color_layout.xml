@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/tvExample"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/image_text_bg"
+        android:padding="4dp"
+        android:text=" T "
+        android:textColor="#7c7c7c"
+        android:textSize="16dp"
+        tools:ignore="HardcodedText,SpUsage" />
+
+    <me.kareluo.imaging.view.IMGColorGroup
+        android:id="@+id/cg_colors"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checkedButton="@+id/cr_white"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="4dp">
+
+        <me.kareluo.imaging.view.IMGColorRadio
+            android:id="@+id/cr_white"
+            android:layout_width="@dimen/image_color"
+            android:layout_height="@dimen/image_color"
+            android:layout_margin="@dimen/image_color_margin"
+            app:image_color="@color/image_color_white" />
+
+        <me.kareluo.imaging.view.IMGColorRadio
+            android:layout_width="@dimen/image_color"
+            android:layout_height="@dimen/image_color"
+            android:layout_margin="@dimen/image_color_margin"
+            app:image_color="@color/image_color_black" />
+
+        <me.kareluo.imaging.view.IMGColorRadio
+            android:layout_width="@dimen/image_color"
+            android:layout_height="@dimen/image_color"
+            android:layout_margin="@dimen/image_color_margin"
+            app:image_color="@color/image_color_red" />
+
+        <me.kareluo.imaging.view.IMGColorRadio
+            android:layout_width="@dimen/image_color"
+            android:layout_height="@dimen/image_color"
+            android:layout_margin="@dimen/image_color_margin"
+            app:image_color="@color/image_color_cyan" />
+
+        <me.kareluo.imaging.view.IMGColorRadio
+            android:layout_width="@dimen/image_color"
+            android:layout_height="@dimen/image_color"
+            android:layout_margin="@dimen/image_color_margin"
+            app:image_color="@color/image_color_yellow" />
+
+        <me.kareluo.imaging.view.IMGColorRadio
+            android:layout_width="@dimen/image_color"
+            android:layout_height="@dimen/image_color"
+            android:layout_margin="@dimen/image_color_margin"
+            app:image_color="@color/image_color_blue" />
+
+    </me.kareluo.imaging.view.IMGColorGroup>
+</LinearLayout>

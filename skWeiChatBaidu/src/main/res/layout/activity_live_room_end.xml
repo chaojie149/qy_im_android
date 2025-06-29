@@ -1,0 +1,299 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/ic_live_end_bg"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="25dp">
+
+        <ImageView
+            android:id="@+id/ivLiveClose"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/margin_screen_old"
+            android:src="@drawable/icon_close"
+            android:tint="#414B61" />
+
+    </RelativeLayout>
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/ivLiveAvatar"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="22dp"
+        android:scaleType="centerCrop"
+        app:riv_oval="true"
+        tools:src="@drawable/logo_bg" />
+
+    <TextView
+        android:id="@+id/tvLiveName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:textColor="#FFEEEEEE"
+        android:textSize="@dimen/sp_13_text_size"
+        tools:text="心动女生" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+        <View
+            android:layout_width="36dp"
+            android:layout_height="0.5dp"
+            android:layout_marginEnd="12dp"
+            android:background="#4D999999" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/mall_live_end"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_20_text_size"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="36dp"
+            android:layout_height="0.5dp"
+            android:layout_marginStart="12dp"
+            android:background="#4D999999" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvLiveLookValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="666"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_18_text_size"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/mall_live_look_count"
+                android:textColor="#FFDDDDDD"
+                android:textSize="@dimen/sp_12_text_size" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="28dp"
+            android:layout_gravity="center_vertical"
+            android:background="#4D999999" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvLiveShareValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="666"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_18_text_size"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/mall_live_share_count"
+                android:textColor="#FFDDDDDD"
+                android:textSize="@dimen/sp_12_text_size" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="28dp"
+            android:layout_gravity="center_vertical"
+            android:background="#4D999999" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvLiveGiftMoneyValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="666"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_18_text_size"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/mall_live_gift_money_total"
+                android:textColor="#FFDDDDDD"
+                android:textSize="@dimen/sp_12_text_size" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!--    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvLiveGoodsClickValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="666"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_18_text_size"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/mall_live_goods_click"
+                    android:textColor="#FFDDDDDD"
+                    android:textSize="@dimen/sp_12_text_size" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="28dp"
+                android:layout_gravity="center_vertical"
+                android:background="#4D999999" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvLiveOrderValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="666"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_18_text_size"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/mall_live_order_total"
+                    android:textColor="#FFDDDDDD"
+                    android:textSize="@dimen/sp_12_text_size" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="28dp"
+                android:layout_gravity="center_vertical"
+                android:background="#4D999999" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvLiveOrderMoneyValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="666"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_18_text_size"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/mall_live_order_money_total"
+                    android:textColor="#FFDDDDDD"
+                    android:textSize="@dimen/sp_12_text_size" />
+
+            </LinearLayout>
+
+        </LinearLayout>-->
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <Button
+        android:id="@+id/btnLiveOpen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="57dp"
+        android:layout_marginEnd="57dp"
+        android:layout_marginBottom="84dp"
+        android:background="@drawable/live_renew_live"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:text="@string/mall_live_open"
+        android:textColor="#FF417FFF"
+        android:textSize="@dimen/sp_17_text_size"
+        android:textStyle="bold" />
+
+</LinearLayout>

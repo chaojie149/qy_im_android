@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/margin_screen_old"
+        android:paddingTop="8dp"
+        android:paddingEnd="@dimen/margin_screen_old"
+        android:paddingBottom="8dp">
+
+        <com.tongxin.caihong.view.HeadView
+            android:id="@+id/ivGroupHead"
+            android:layout_width="48dp"
+            android:layout_height="48dp" />
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:ellipsize="end"
+                android:maxWidth="200dp"
+                android:maxLines="1"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_15_text_size"
+                tools:text="高管群" />
+
+            <TextView
+                android:id="@+id/tvNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="4dp"
+                android:layout_toEndOf="@+id/tvName"
+                android:background="@drawable/near_num_bg"
+                android:paddingStart="3dp"
+                android:paddingTop="1dp"
+                android:paddingEnd="3dp"
+                android:paddingBottom="1dp"
+                android:textColor="@color/white"
+                android:textSize="8sp"
+                tools:text="999人" />
+
+            <TextView
+                android:id="@+id/tvDesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvName"
+                android:layout_gravity="start"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/text_value"
+                android:textSize="@dimen/sp_13_text_size"
+                tools:text="心外无物、心外无理" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvJoin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/near_bg"
+                android:paddingStart="10dp"
+                android:paddingTop="3dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="3dp"
+                android:text="@string/add_group"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_12_text_size" />
+
+            <TextView
+                android:id="@+id/tvDistant"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/text_value"
+                android:textSize="@dimen/sp_12_text_size"
+                tools:text="0.36km" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="73dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/divider" />
+
+</LinearLayout>

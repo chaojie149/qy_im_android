@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:showIn="@layout/activity_friend_add">
+
+
+    <LinearLayout
+        android:id="@+id/llSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_screen_old"
+        android:layout_marginEnd="@dimen/margin_screen_old"
+        android:background="@drawable/et_search_bg"
+        android:gravity="center"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/tvSearch"
+            android:layout_width="wrap_content"
+            android:layout_height="34dp"
+            android:drawableStart="@drawable/search"
+            android:drawablePadding="5dp"
+            android:gravity="center"
+            android:hint="@string/search"
+            android:textColor="@color/dark_grey"
+            android:textColorHint="#B1B1B1"
+            android:textSize="@dimen/message_search_size" />
+
+    </LinearLayout>
+
+    <com.tongxin.caihong.view.ClearEditText
+        android:id="@+id/etSearch"
+        android:layout_width="match_parent"
+        android:layout_height="34dp"
+        android:layout_marginStart="@dimen/margin_screen_old"
+        android:layout_marginEnd="@dimen/margin_screen_old"
+        android:background="@drawable/et_search_bg"
+        android:drawableLeft="@drawable/search"
+        android:drawableRight="@drawable/search_clear"
+        android:drawablePadding="9dp"
+        android:hint="@string/search"
+        android:paddingStart="9dp"
+        android:paddingEnd="9dp"
+        android:singleLine="true"
+        android:textColor="@color/dark_grey"
+        android:textColorHint="#B1B1B1"
+        android:textSize="@dimen/message_search_size"
+        android:visibility="gone" />
+
+</LinearLayout>

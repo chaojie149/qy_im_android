@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:gravity="center_vertical"
+    android:paddingStart="18dp"
+    android:paddingTop="13dp"
+    android:paddingEnd="@dimen/margin_screen_old"
+    android:paddingBottom="13dp">
+
+    <TextView
+        android:id="@+id/tvNo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#FFF9F2A7"
+        android:textSize="15sp"
+        tools:text="1" />
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/ivAvatar"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="18dp"
+        android:scaleType="centerCrop"
+        app:riv_border_width="1dp"
+        app:riv_oval="true"
+        tools:src="@drawable/default_head" />
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:layout_weight="1"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textColor="#FF111111"
+        android:textSize="@dimen/sp_15_text_size"
+        tools:text="涵涵" />
+
+    <TextView
+        android:id="@+id/tvRewardDiamonds"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_12_text_size"
+        tools:text="666" />
+
+</LinearLayout>

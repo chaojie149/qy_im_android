@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ly_emotion"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="0.2" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/white" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="0.2" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabDots"
+        style="@style/DotTab"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp" />
+
+    <View style="@style/View_Line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/margin_screen_old">
+
+        <FrameLayout
+            android:id="@+id/flEmoji"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <View
+                android:id="@+id/vEmoji"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:background="@drawable/face_selected_bg" />
+
+            <ImageView
+                android:id="@+id/ivEmoji"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@mipmap/ic_chat_face_emj" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/flGif"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="21dp">
+
+            <View
+                android:id="@+id/vGif"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:background="@drawable/face_selected_bg"
+                android:visibility="invisible" />
+
+            <ImageView
+                android:id="@+id/ivGif"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@mipmap/ic_chat_face_gif" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/flCollection"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="21dp">
+
+            <View
+                android:id="@+id/vCollection"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:background="@drawable/face_selected_bg"
+                android:visibility="invisible" />
+
+            <ImageView
+                android:id="@+id/ivCollection"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@mipmap/ic_chat_face_collection" />
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

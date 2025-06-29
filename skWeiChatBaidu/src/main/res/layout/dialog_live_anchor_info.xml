@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/llContent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:descendantFocusability="afterDescendants">
+
+    <LinearLayout
+        android:id="@+id/llWindow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/live_common_bg"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="52dp"
+            android:gravity="center"
+            android:paddingStart="@dimen/margin_screen_old"
+            android:paddingEnd="@dimen/margin_screen_old"
+            android:textColor="#FF111111"
+            android:textSize="@dimen/sp_16_text_size"
+            android:textStyle="bold"
+            tools:text="暮雨(绝地求生)在线1v99" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/mall_live_this_anchor"
+                android:textColor="@color/text_value"
+                android:textSize="@dimen/sp_12_text_size" />
+
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/sp_12_text_size"
+                tools:text="暮雨" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="20dp"
+            android:paddingStart="@dimen/margin_screen_old"
+            android:paddingEnd="@dimen/margin_screen_old">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/mall_live_this_topic"
+                android:textColor="@color/text_value"
+                android:textSize="@dimen/sp_12_text_size" />
+
+            <com.tongxin.caihong.view.MarqueeTextView
+                android:id="@+id/tvTopic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="marquee"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:singleLine="true"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/sp_12_text_size"
+                tools:text="绝地求生乱杀" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/ivAvatar"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_above="@+id/llWindow"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="-40dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/default_head"
+        app:riv_border_color="@color/white"
+        app:riv_border_width="2dp"
+        app:riv_oval="true" />
+
+</RelativeLayout>

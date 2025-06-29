@@ -1,0 +1,10 @@
+<resources>
+    <string name="scanner_view_tip_text">Put the QR code / barcode in frame, Auto scan</string>
+    <string name="check_net">The current network is not available \ n Please check the network settings</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="tip_decode_failed">QR code / barcode not identified in photo</string>
+    <string name="title_qr_code_or_banner_code">QR code / barcode</string>
+
+    <string name="photo_shop">Photo album</string>
+</resources>

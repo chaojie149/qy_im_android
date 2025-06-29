@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/list_selector_background"
+    android:orientation="horizontal"
+    android:paddingStart="@dimen/margin_screen_old"
+    android:paddingTop="@dimen/margin_screen_old"
+    android:paddingEnd="@dimen/margin_screen_old">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/ivImage"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:scaleType="fitXY"
+            app:riv_corner_radius="4dp"
+            tools:src="@drawable/logo_bg" />
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_play_inco" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/des_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black_new_title"
+            android:textSize="@dimen/sp_14_text_size"
+            tools:text="宇宙.mp4" />
+
+        <TextView
+            android:id="@+id/create_time_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/text_value"
+            android:textSize="@dimen/sp_13_text_size"
+            tools:text="2107-09-09" />
+
+        <TextView
+            android:id="@+id/length_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/text_value"
+            android:textSize="@dimen/sp_13_text_size"
+            tools:text="2s" />
+
+        <TextView
+            android:id="@+id/size_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/text_value"
+            android:textSize="@dimen/sp_13_text_size"
+            tools:text="20kb" />
+
+    </LinearLayout>
+
+    <CheckBox
+        android:id="@+id/select_cb"
+        style="@style/CustomCheckBoxTheme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true" />
+
+</LinearLayout>

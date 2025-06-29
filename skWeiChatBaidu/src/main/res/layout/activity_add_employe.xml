@@ -1,0 +1,43 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/a_view_actionbar" />
+
+    <ListView
+        android:id="@+id/lvAdd"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:cacheColorHint="#00000000"
+        android:dividerHeight="0px"
+        android:gravity="fill"
+        android:scrollbars="none" />
+
+    <View style="@style/View_Line" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@color/white"
+        android:padding="7dp">
+
+        <Button
+            android:id="@+id/btnAdd"
+            style="@style/OKBtn"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true" />
+
+        <com.tongxin.caihong.view.HorizontalListView xmlns:widget="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/hlvAdded"
+            android:layout_width="fill_parent"
+            android:layout_height="37dp"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@id/btnAdd"
+            android:divider="@color/transparent"
+            widget:dividerWidth="5dp" />
+
+    </RelativeLayout>
+
+</LinearLayout>

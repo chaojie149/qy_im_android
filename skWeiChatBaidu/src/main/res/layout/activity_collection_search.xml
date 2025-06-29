@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.tongxin.caihong.ui.me.collection.CollectionFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="5dp"
+        android:paddingTop="40dp"
+        android:paddingRight="8dp"
+        android:paddingBottom="9dp">
+
+        <com.tongxin.caihong.view.SkinImageView
+            android:id="@+id/iv_title_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:paddingLeft="7dp"
+            android:paddingRight="@dimen/dp5"
+            android:src="@mipmap/return_icon"
+            android:tint="@color/black" />
+
+        <com.tongxin.caihong.view.ClearEditText
+            android:id="@+id/search_edit"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/dp5"
+            android:layout_marginRight="9dp"
+            android:background="@drawable/et_search_bg"
+            android:drawableLeft="@drawable/search"
+            android:drawableRight="@drawable/search_clear"
+            android:drawablePadding="9dp"
+            android:hint="@string/hint_search_all"
+            android:paddingLeft="9dp"
+            android:paddingRight="9dp"
+            android:singleLine="true"
+            android:textColor="@color/dark_grey"
+            android:textColorHint="@color/grey"
+            android:textSize="@dimen/message_search_size" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/dp10"
+            android:text="@string/search"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_not_data"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/collection_not_data" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="还没有数据哦~赶快去收藏吧!" />
+
+    </LinearLayout>
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        app:srlEnableAutoLoadMore="false"
+        app:srlEnableLoadMore="true"
+        app:srlEnableRefresh="false">
+
+        <com.tongxin.caihong.view.PullRefreshHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <com.yanzhenjie.recyclerview.SwipeRecyclerView
+            android:id="@+id/rc_collection"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/dp10"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:paddingStart="11.5dp"
+            android:paddingEnd="11.5dp" />
+
+        <com.tongxin.caihong.view.PullRefreshFooter
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+</LinearLayout>

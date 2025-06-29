@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/popuwindow_bg"
+        android:orientation="vertical"
+        android:paddingTop="8dp">
+
+    <LinearLayout
+            android:id="@+id/llShare"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/margin_screen_old"
+            android:paddingTop="8dp"
+            android:paddingRight="@dimen/margin_screen_old"
+            android:paddingBottom="8dp">
+
+        <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:padding="1dp"
+                android:src="@drawable/ic_share_right"
+                android:tint="@color/white" />
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_screen_old"
+                android:text="@string/trill_share"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_14_text_size" />
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:id="@+id/llDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/margin_screen_old"
+            android:paddingTop="8dp"
+            android:paddingRight="@dimen/margin_screen_old"
+            android:paddingBottom="8dp"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+        <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:src="@mipmap/circle_delete"
+                android:tint="@color/white" />
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_screen_old"
+                android:text="@string/delete"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_14_text_size" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+            android:id="@+id/llReport"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/margin_screen_old"
+            android:paddingTop="8dp"
+            android:paddingRight="@dimen/margin_screen_old"
+            android:paddingBottom="8dp">
+
+        <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:src="@mipmap/report"
+                android:tint="@color/white" />
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_screen_old"
+                android:text="@string/report"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_14_text_size" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

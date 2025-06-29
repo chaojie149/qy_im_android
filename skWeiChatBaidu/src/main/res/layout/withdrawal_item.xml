@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_content"
+    android:layout_width="100dp"
+    android:layout_height="60dp"
+    android:layout_gravity="center"
+    android:background="@drawable/withdrawal_item__nomal_bg">
+
+    <TextView
+        android:id="@+id/tv_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:paddingStart="20dp"
+        android:paddingTop="@dimen/dp15"
+        android:paddingEnd="20dp"
+        android:paddingBottom="@dimen/dp15"
+        android:text="1元"
+        android:textColor="#fff14f52"
+        android:textSize="16sp" />
+
+</RelativeLayout>

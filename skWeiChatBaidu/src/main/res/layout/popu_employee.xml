@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/kx_message_pop_bg"
+    android:divider="@drawable/popu_message_divider"
+    android:orientation="vertical"
+    android:showDividers="middle">
+
+    <TextView
+        android:id="@+id/tv_basic_employee"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@mipmap/add_partment_icon"
+        android:drawablePadding="8dp"
+        android:gravity="start|center_vertical"
+        android:paddingLeft="18dp"
+        android:paddingTop="15dp"
+        android:paddingRight="18dp"
+        android:paddingBottom="15dp"
+        android:text="@string/employee_detail"
+        android:textColor="@color/white"
+        android:textSize="@dimen/pop_window" />
+
+    <TextView
+        android:id="@+id/tv_change_department"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@mipmap/company_change_name"
+        android:drawablePadding="8dp"
+        android:gravity="start|center_vertical"
+        android:paddingLeft="18dp"
+        android:paddingTop="15dp"
+        android:paddingRight="18dp"
+        android:paddingBottom="15dp"
+        android:singleLine="true"
+        android:text="@string/change_departement"
+        android:textColor="@color/white"
+        android:textSize="@dimen/pop_window" />
+
+    <TextView
+        android:id="@+id/tv_modify_position"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@mipmap/company_change_name"
+        android:drawablePadding="8dp"
+        android:gravity="start|center_vertical"
+        android:paddingLeft="18dp"
+        android:paddingTop="15dp"
+        android:paddingRight="18dp"
+        android:paddingBottom="15dp"
+        android:singleLine="true"
+        android:text="@string/modify_job"
+        android:textColor="@color/white"
+        android:textSize="@dimen/pop_window" />
+
+    <TextView
+        android:id="@+id/tv_delete_employee"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@mipmap/company_delete_icon"
+        android:drawablePadding="8dp"
+        android:gravity="start|center_vertical"
+        android:paddingLeft="18dp"
+        android:paddingTop="15dp"
+        android:paddingRight="18dp"
+        android:paddingBottom="15dp"
+        android:text="@string/del_employee"
+        android:textColor="@color/white"
+        android:textSize="@dimen/pop_window" />
+
+</LinearLayout>

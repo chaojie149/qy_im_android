@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent">
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:srlEnableAutoLoadMore="true"
+        app:srlEnableLoadMore="true">
+
+        <com.tongxin.caihong.view.PullRefreshHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <com.yanzhenjie.recyclerview.SwipeRecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            android:overScrollMode="never"
+            tools:listitem="@android:layout/simple_list_item_2" />
+
+        <com.tongxin.caihong.view.PullRefreshFooter
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+    <com.tongxin.caihong.view.MergerStatus
+        android:id="@+id/mergerStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/main_color">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <com.tongxin.caihong.view.SkinImageView
+                android:id="@+id/iv_title_left_first"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:padding="@dimen/dp15"
+                android:src="@mipmap/return_icon"
+                android:visibility="visible" />
+
+            <com.tongxin.caihong.view.SkinTextView
+                android:id="@+id/tv_title_center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:ellipsize="middle"
+                android:maxWidth="200dp"
+                android:singleLine="true"
+                android:text="@string/life_circle"
+                android:textColor="@color/app_white"
+                android:textSize="@dimen/sp_18_text_size" />
+
+            <com.tongxin.caihong.view.SkinImageView
+                android:id="@+id/iv_title_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="8dp"
+                android:padding="8dp"
+                android:src="@mipmap/more_icon" />
+
+        </RelativeLayout>
+
+    </com.tongxin.caihong.view.MergerStatus>
+
+    <com.tongxin.caihong.view.StatusBarRelativeLayout
+        android:id="@+id/rl_title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        tools:layout_marginTop="24dp">
+
+        <ImageView
+            android:id="@+id/iv_title_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:padding="15dp"
+            android:src="@mipmap/return_icon"
+            android:tint="@color/white" />
+
+        <ImageView
+            android:id="@+id/iv_title_add"
+            android:layout_width="@dimen/menu_item_size"
+            android:layout_height="@dimen/menu_item_size"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/dp15"
+            android:src="@mipmap/more_icon"
+            android:tint="@color/white" />
+
+        <TextView
+            android:id="@+id/tv_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:ellipsize="middle"
+            android:maxWidth="200dp"
+            android:padding="@dimen/dp10"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_18_text_size" />
+
+    </com.tongxin.caihong.view.StatusBarRelativeLayout>
+
+    <TextView
+        android:id="@+id/load_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="@string/loading"
+        android:textColor="@color/Grey_600"
+        android:textSize="@dimen/BigTextSize"
+        android:visibility="gone" />
+
+</RelativeLayout>

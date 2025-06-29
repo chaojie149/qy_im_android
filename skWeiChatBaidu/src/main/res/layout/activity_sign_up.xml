@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/normal_bg"
+    android:layoutDirection="ltr"
+    android:orientation="vertical">
+
+    <include layout="@layout/a_view_actionbar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/ll_top"
+            android:layout_width="match_parent"
+            android:layout_height="243dp"
+            android:background="@mipmap/sign_up_bg"
+            android:orientation="vertical">
+
+            <com.tongxin.caihong.view.HeadView
+                android:id="@+id/avatar_img"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="33dp"
+                android:layout_marginBottom="2dp"
+                android:gravity="center"
+                android:scaleType="centerCrop"
+                android:src="@drawable/avatar_normal"
+                android:visibility="visible" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="3dp"
+                    android:text="￥"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tv_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0.0"
+                    android:textColor="@color/white"
+                    android:textSize="22sp" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/bt_withdrawal"
+                android:layout_width="@dimen/dp70"
+                android:layout_height="@dimen/dp30"
+                android:layout_gravity="center"
+                android:layout_marginTop="13dp"
+                android:layout_marginBottom="@dimen/dp25"
+                android:background="@drawable/sign_bt_bg"
+                android:text="@string/withdraw"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_card"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp220"
+            android:layout_alignBottom="@+id/ll_top"
+            android:layout_marginStart="@dimen/margin_screen_old"
+            android:layout_marginEnd="@dimen/margin_screen_old"
+            android:layout_marginBottom="-170dp"
+            android:background="@drawable/a_bg_for_payment"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp5"
+                android:layout_marginTop="@dimen/dp20"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_sign_sum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sign_sum"
+                    android:textColor="#ff333333"
+                    android:textSize="15sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical|right"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="12dp"
+                        android:text="@string/sign_ring"
+                        android:textColor="#ff666666"
+                        android:textSize="12sp" />
+
+                    <com.tongxin.caihong.view.SwitchButton
+                        android:id="@+id/sb_sign"
+                        android:layout_width="35dp"
+                        android:layout_height="23dp"
+                        android:layout_centerVertical="true"
+                        android:clickable="false"
+                        app:sb_background="@color/app_white"
+                        app:sb_checked_color="@color/main_color"
+                        app:sb_effect_duration="100"
+                        app:sb_shadow_radius="4dp"
+                        app:sb_show_indicator="false" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_sign"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:id="@+id/ll_imageview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_screen_old"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginEnd="@dimen/margin_screen_old"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="15dp"
+                        android:layout_height="1px"
+                        android:layout_marginEnd="@dimen/dp5"
+                        android:layout_weight="1"
+                        android:background="@color/yellow" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:src="@mipmap/sign_up_ed" />
+
+                    <View
+                        android:layout_width="15dp"
+                        android:layout_height="1px"
+                        android:layout_marginStart="@dimen/dp5"
+                        android:layout_marginEnd="@dimen/dp5"
+                        android:layout_weight="1"
+                        android:background="@color/yellow" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:src="@mipmap/sign_up" />
+
+                    <View
+                        android:layout_width="15dp"
+                        android:layout_height="1px"
+                        android:layout_marginStart="@dimen/dp5"
+                        android:layout_marginEnd="@dimen/dp5"
+                        android:layout_weight="1"
+                        android:background="@color/yellow" />
+
+                    <ImageView
+                        android:id="@+id/iv_sign_red"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:src="@mipmap/sign_up"
+                        android:visibility="visible" />
+
+                    <View
+                        android:layout_width="15dp"
+                        android:layout_height="1px"
+                        android:layout_marginStart="@dimen/dp5"
+                        android:layout_marginEnd="@dimen/dp5"
+                        android:layout_weight="1"
+                        android:background="@color/yellow" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:src="@mipmap/sign_up" />
+
+                    <View
+                        android:layout_width="15dp"
+                        android:layout_height="1px"
+                        android:layout_marginStart="@dimen/dp5"
+                        android:layout_marginEnd="@dimen/dp5"
+                        android:layout_weight="1"
+                        android:background="@color/yellow" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:src="@mipmap/sign_up" />
+
+                    <View
+                        android:layout_width="15dp"
+                        android:layout_height="1px"
+                        android:layout_marginStart="@dimen/dp5"
+                        android:layout_marginEnd="@dimen/dp5"
+                        android:layout_weight="1"
+                        android:background="@color/yellow" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:src="@mipmap/sign_up" />
+
+                    <View
+                        android:layout_width="15dp"
+                        android:layout_height="1px"
+                        android:layout_marginStart="@dimen/dp5"
+                        android:layout_marginEnd="@dimen/dp5"
+                        android:layout_weight="1"
+                        android:background="@color/yellow" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:src="@mipmap/sign_up" />
+
+                    <View
+                        android:layout_width="15dp"
+                        android:layout_height="1px"
+                        android:layout_marginStart="@dimen/dp5"
+                        android:layout_marginEnd="@dimen/dp5"
+                        android:layout_weight="1"
+                        android:background="@color/yellow" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_day"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_screen_old"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:layout_marginEnd="@dimen/margin_screen_old"
+                    android:orientation="horizontal"
+                    android:paddingEnd="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="end"
+                        android:text="@string/one_day" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="end"
+                        android:text="@string/two_day" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="end"
+                        android:text="@string/three_day" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="end"
+                        android:text="@string/four_day" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="end"
+                        android:text="@string/five_day" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="end"
+                        android:text="@string/six_day" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="end"
+                        android:text="@string/sever" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="end"
+                        android:text="" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_des"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp5"
+                    android:layout_marginTop="19dp"
+                    android:text="@string/sign_title_des"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/sp_12_text_size" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/bt_sign"
+                android:layout_width="215dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="19dp"
+                android:layout_marginBottom="@dimen/dp18"
+                android:background="@drawable/sign_up_bt_bg"
+                android:text="@string/sign"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_14_text_size" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_sign_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/ll_card"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="-30dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="@dimen/dp50"
+                android:layout_height="1px"
+                android:background="#C1C1C1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp10"
+                android:layout_marginEnd="@dimen/dp10"
+                android:text="@string/sign_rule"
+                android:textColor="#ff333333"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="@dimen/dp50"
+                android:layout_height="1px"
+                android:background="#C1C1C1" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/ll_sign_text"
+            android:layout_marginStart="@dimen/dp15"
+            android:layout_marginBottom="-45dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/sign_des1"
+                android:textColor="#ff999999"
+                android:textSize="11sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:text="@string/sign_des2"
+                android:textColor="#ff999999"
+                android:textSize="11sp" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

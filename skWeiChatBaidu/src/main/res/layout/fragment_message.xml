@@ -1,0 +1,74 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/message_fragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/a_view_actionbar" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:srlEnableAutoLoadMore="false"
+        app:srlEnableLoadMore="false">
+
+        <com.tongxin.caihong.view.PullRefreshHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            android:id="@+id/innerRefresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:srlEnableAutoLoadMore="false"
+            app:srlEnableLoadMore="false">
+
+            <com.tongxin.caihong.view.SearchHeader
+                android:id="@+id/shSearch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="7dp"
+                android:paddingBottom="7dp" />
+
+            <com.yanzhenjie.recyclerview.SwipeRecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/white"
+                android:overScrollMode="never"
+                tools:listitem="@android:layout/simple_list_item_2" />
+
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+    <com.tongxin.caihong.view.CircleImageView
+        android:id="@+id/sign"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="end|bottom"
+        android:layout_marginEnd="@dimen/dp10"
+        android:layout_marginBottom="@dimen/dp50"
+        android:src="@mipmap/sign1" />
+
+</FrameLayout>
+    <TextView
+        android:id="@+id/load_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="@string/loading"
+        android:textColor="@color/Grey_600"
+        android:textSize="@dimen/BigTextSize"
+        android:visibility="gone" />
+
+</LinearLayout>

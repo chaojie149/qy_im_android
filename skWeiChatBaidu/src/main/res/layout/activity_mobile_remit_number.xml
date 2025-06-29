@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/normal_bg"
+    android:orientation="vertical"
+    tools:context="com.tongxin.caihong.pay.new_ui.MobileRemitNumberActivity">
+
+    <include layout="@layout/a_view_actionbar" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp60"
+        android:gravity="center"
+        android:text="@string/please_input_each"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_20_text_size"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp30"
+        android:gravity="center"
+        android:lineSpacingExtra="@dimen/dp10"
+        android:paddingLeft="@dimen/dp15"
+        android:paddingRight="@dimen/dp15"
+        android:text="@string/tips"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_18_text_size" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="@dimen/dp30"
+        android:layout_marginTop="@dimen/dp40"
+        android:layout_marginRight="@dimen/dp30"
+        android:background="@color/divider" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp15"
+        android:layout_marginBottom="@dimen/dp15"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/dp30"
+        android:paddingRight="@dimen/dp30">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/phone_number"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_18_text_size" />
+
+        <com.tongxin.caihong.view.ClearEditText
+            android:id="@+id/cet_phone"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:inputType="phone"
+            android:maxLength="11"
+            android:paddingLeft="@dimen/dp15"
+            android:paddingRight="@dimen/dp5"
+            android:textSize="@dimen/sp_16_text_size" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="@dimen/dp30"
+        android:layout_marginRight="@dimen/dp30"
+        android:layout_marginBottom="@dimen/dp80"
+        android:background="@color/divider" />
+
+    <Button
+        android:id="@+id/bt_sure"
+        style="@style/BossGreenBtn"
+        android:text="@string/sure" />
+
+</LinearLayout>

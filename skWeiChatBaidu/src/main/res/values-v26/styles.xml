@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 安卓8不允许固定方向的全屏透明页面，所以不能有windowIsTranslucent -->
+    <style name="AppTheme_Sliding" parent="AppBaseTheme">
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+</resources>

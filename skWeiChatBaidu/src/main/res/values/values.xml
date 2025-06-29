@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="GifTextureView">
+        <attr name="gifSource" format="reference|string"/>
+        <attr name="isOpaque" format="boolean"/>
+    </declare-styleable>
+    <declare-styleable name="GifView">
+        <attr name="freezesAnimation" format="boolean"/>
+    </declare-styleable>
+    <declare-styleable name="BubblePagerIndicator">
+        <attr name="outerPadding" format="dimension"/>
+        <attr name="innerVerticalPadding" format="dimension"/>
+        <attr name="innerHorizontalPadding" format="dimension"/>
+    </declare-styleable>
+
+</resources>

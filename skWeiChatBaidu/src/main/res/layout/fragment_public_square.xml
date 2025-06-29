@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.tongxin.caihong.view.StatusBarRelativeLayout
+        android:id="@+id/rl_title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        tools:layout_marginTop="28dp">
+
+        <ImageView
+            android:id="@+id/iv_title_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:src="@mipmap/return_icon"
+            android:tint="@color/black" />
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_toStartOf="@+id/iv_title_add"
+            android:layout_toEndOf="@id/iv_title_left"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:id="@+id/llTab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"></LinearLayout>
+        </HorizontalScrollView>
+
+        <View
+            android:id="@+id/vTabCover"
+            android:layout_width="47dp"
+            android:layout_height="44dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/trill_tab_cover" />
+
+        <ImageView
+            android:id="@+id/iv_title_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="5dp"
+            android:padding="10dp"
+            android:src="@mipmap/kx_my_camera"
+            android:tint="@color/black" />
+
+    </com.tongxin.caihong.view.StatusBarRelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:orientation="vertical">
+
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            android:id="@+id/refreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:srlEnableAutoLoadMore="true"
+            app:srlEnableLoadMore="true">
+
+            <com.tongxin.caihong.view.PullRefreshHeader
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srlClassicsSpinnerStyle="FixedBehind" />
+
+            <com.yanzhenjie.recyclerview.SwipeRecyclerView
+                android:id="@+id/rv_pager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#ECECEC"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:paddingStart="1dp" />
+
+            <com.tongxin.caihong.view.PullRefreshFooter
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_basic"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/kx_message_pop_bg"
+    android:divider="@drawable/divider_popup_basic_info"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:showDividers="middle">
+
+    <TextView
+        android:id="@+id/report_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:minWidth="140dp"
+        android:minHeight="40dp"
+        android:paddingStart="18dp"
+        android:paddingTop="15dp"
+        android:paddingEnd="18dp"
+        android:paddingBottom="15dp"
+        android:text="@string/report"
+        android:textColor="@color/white"
+        android:textSize="@dimen/pop_window" />
+
+    <TextView
+        android:id="@+id/set_remark_nameS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:minWidth="140dp"
+        android:minHeight="40dp"
+        android:paddingStart="18dp"
+        android:paddingTop="15dp"
+        android:paddingEnd="18dp"
+        android:paddingBottom="15dp"
+        android:text="@string/set_remark_and_label"
+        android:textColor="@color/white"
+        android:textSize="@dimen/pop_window" />
+
+    <TextView
+        android:id="@+id/add_blacklist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:minWidth="140dp"
+        android:minHeight="40dp"
+        android:paddingStart="18dp"
+        android:paddingTop="15dp"
+        android:paddingEnd="18dp"
+        android:paddingBottom="15dp"
+        android:text="@string/add_black_list"
+        android:textColor="@color/white"
+        android:textSize="@dimen/pop_window"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/remove_blacklist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:minWidth="140dp"
+        android:minHeight="40dp"
+        android:paddingStart="18dp"
+        android:paddingTop="15dp"
+        android:paddingEnd="18dp"
+        android:paddingBottom="15dp"
+        android:text="@string/remove_black_list"
+        android:textColor="@color/white"
+        android:textSize="@dimen/pop_window"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/delete_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:minWidth="140dp"
+        android:minHeight="40dp"
+        android:paddingStart="18dp"
+        android:paddingTop="15dp"
+        android:paddingEnd="18dp"
+        android:paddingBottom="15dp"
+        android:text="@string/thoroughly_delete"
+        android:textColor="@color/white"
+        android:textSize="@dimen/pop_window"
+        android:visibility="gone" />
+
+</LinearLayout>

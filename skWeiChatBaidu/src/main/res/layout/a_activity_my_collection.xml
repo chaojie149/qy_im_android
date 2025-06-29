@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/a_view_actionbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@color/white"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+
+        <TextView
+            android:id="@+id/tvSearch"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:background="@drawable/et_search_bg"
+            android:drawableLeft="@drawable/search"
+            android:drawablePadding="9dp"
+            android:focusable="false"
+            android:focusableInTouchMode="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="9dp"
+            android:paddingRight="9dp"
+            android:textColor="@color/dark_grey"
+            android:textColorHint="@color/grey"
+            android:textSize="@dimen/message_search_size" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <com.tongxin.caihong.ui.smarttab.SmartTabLayout
+            android:id="@+id/stlMyCollection"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/white"
+            app:stl_custom_collection="true"
+            app:stl_distributeEvenly="false"
+            app:stl_dividerColor="#00000000"
+            app:stl_dividerThickness="1dp"
+            app:stl_drawDecorationAfterTab="false"
+            app:stl_indicatorColor="@color/transparent"
+            app:stl_indicatorInterpolation="linear"
+            app:stl_indicatorWithoutPadding="true"
+            app:stl_overlineColor="#ffffff"
+            app:stl_overlineThickness="0dp"
+            app:stl_titleOffset="auto_center"
+            app:stl_underlineColor="#ffffff"
+            app:stl_underlineThickness="0dp" />
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/vpMyCollection"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/stlMyCollection"
+            android:layout_marginTop="@dimen/dp10" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/llDelete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#F9F9F9"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/dp15"
+        android:paddingTop="11dp"
+        android:paddingEnd="@dimen/dp15"
+        android:paddingBottom="7dp"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/selected"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_12_text_size" />
+
+            <TextView
+                android:id="@+id/tvSelectCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0/20"
+                android:textColor="@color/text_value"
+                android:textSize="10sp" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/btnDelete"
+            android:layout_width="164dp"
+            android:layout_height="26dp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/collect_bt_bg"
+            android:text="@string/delete"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+</LinearLayout>

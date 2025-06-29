@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/normal_bg"
+    android:divider="@drawable/common_divider"
+    android:orientation="vertical"
+    android:showDividers="middle">
+
+    <include layout="@layout/a_view_actionbar" />
+
+    <RelativeLayout
+        style="@style/IMTbleLine"
+        android:layout_marginTop="9dp">
+
+        <TextView
+            android:id="@+id/tvDeviceLock"
+            style="@style/IMTbleLine_TextKey_End_Btn"
+            android:layout_toStartOf="@+id/sbDeviceLock"
+            android:text="@string/enable_device_lock" />
+
+        <com.tongxin.caihong.view.SwitchButton
+            android:id="@+id/sbDeviceLock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            app:sb_background="@color/app_white"
+            app:sb_checked_color="@color/main_color"
+            app:sb_enable_effect="false"
+            app:sb_shadow_radius="4dp"
+            app:sb_show_indicator="false" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/changeroute"
+        style="@style/IMTbleLine">
+
+        <TextView
+            android:id="@+id/changeroutetext"
+            style="@style/IMTbleLine_TextKey"
+            android:text="设置服务器" />
+
+        <ImageView style="@style/IMTbleLine_ArrowImg" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/llDeviceLockDetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@drawable/common_divider"
+        android:orientation="vertical"
+        android:showDividers="middle">
+
+        <RelativeLayout
+            android:id="@+id/rlChangeDeviceLockPassword"
+            style="@style/IMTbleLine">
+
+            <TextView
+                android:id="@+id/tvChangeDeviceLockPassword"
+                style="@style/IMTbleLine_TextKey"
+                android:text="@string/change_device_lock_password" />
+
+            <ImageView style="@style/IMTbleLine_ArrowImg" />
+
+        </RelativeLayout>
+
+        <RelativeLayout style="@style/IMTbleLine">
+
+            <TextView
+                android:id="@+id/tvDeviceLockFree"
+                style="@style/IMTbleLine_TextKey_End_Btn"
+                android:layout_toStartOf="@+id/sbDeviceLockFree"
+                android:text="@string/tip_device_lock_free" />
+
+            <com.tongxin.caihong.view.SwitchButton
+                android:id="@+id/sbDeviceLockFree"
+                style="@style/IMTbleLine_ArrowBtn"
+                app:sb_background="@color/app_white"
+                app:sb_checked_color="@color/main_color"
+                app:sb_enable_effect="false"
+                app:sb_shadow_radius="4dp"
+                app:sb_show_indicator="false" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlAuthLogin"
+        style="@style/IMTbleLine"
+        android:visibility="visible">
+
+        <TextView
+            style="@style/IMTbleLine_TextKey_End_Btn"
+            android:layout_toStartOf="@+id/sbAuthLogin"
+            android:text="@string/label_need_not_auth_login" />
+
+        <com.tongxin.caihong.view.SwitchButton
+            android:id="@+id/sbAuthLogin"
+            style="@style/IMTbleLine_ArrowBtn"
+            app:sb_background="@color/app_white"
+            app:sb_checked_color="@color/main_color"
+            app:sb_effect_duration="100"
+            app:sb_shadow_radius="4dp"
+            app:sb_show_indicator="false" />
+
+    </RelativeLayout>
+
+</LinearLayout>

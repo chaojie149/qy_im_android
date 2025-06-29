@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.tongxin.caihong.ui.me.redpacket.PaymentCenterActivity">
+
+    <include layout="@layout/a_view_actionbar" />
+
+    <RelativeLayout
+        android:id="@+id/my_change"
+        style="@style/IMTbleLine"
+        android:visibility="visible">
+
+        <ImageView
+            android:layout_width="@dimen/dp20"
+            android:layout_height="@dimen/dp20"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/my_change_icon" />
+
+        <TextView
+            style="@style/IMTbleLine_TextKey_Has_Icon"
+            android:text="@string/my_change" />
+
+        <ImageView
+            style="@style/IMTbleLine_ArrowImg"
+            android:contentDescription="@string/app_name" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@drawable/common_divider"
+        android:orientation="vertical"
+        android:showDividers="middle">
+
+        <RelativeLayout
+            android:id="@+id/rlWebox"
+            style="@style/IMTbleLine"
+            android:layout_marginTop="8dp"
+            android:visibility="visible">
+
+            <ImageView
+                android:layout_width="@dimen/dp20"
+                android:layout_height="@dimen/dp20"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/my_cloud_wallet" />
+
+            <TextView
+                style="@style/IMTbleLine_TextKey_Has_Icon"
+                android:text="@string/my_webox" />
+
+            <ImageView
+                style="@style/IMTbleLine_ArrowImg"
+                android:contentDescription="@string/app_name" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlWeboxBind"
+            style="@style/IMTbleLine"
+            android:background="@color/white"
+            android:visibility="visible">
+
+            <ImageView
+                android:layout_width="@dimen/dp20"
+                android:layout_height="@dimen/dp20"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/bank_card" />
+
+            <TextView
+                style="@style/IMTbleLine_TextKey_Has_Icon"
+                android:text="@string/bank_card" />
+
+            <ImageView
+                style="@style/IMTbleLine_ArrowImg"
+                android:contentDescription="@string/app_name" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

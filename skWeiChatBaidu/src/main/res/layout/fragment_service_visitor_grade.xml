@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="@dimen/margin_screen_old">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/service_tip_grade_1"
+        android:textColor="@color/black"
+        android:textSize="14sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/service_label_grade_star"
+        android:textColor="#ff666666"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tvStar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="14dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        tools:text="较好" />
+
+    <com.willy.ratingbar.BaseRatingBar
+        android:id="@+id/rbStart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        app:srb_clearRatingEnabled="true"
+        app:srb_clickable="true"
+        app:srb_drawableEmpty="@mipmap/service_grade_star_out"
+        app:srb_drawableFilled="@mipmap/service_grade_star_in"
+        app:srb_isIndicator="false"
+        app:srb_minimumStars="1"
+        app:srb_numStars="5"
+        app:srb_rating="5"
+        app:srb_scrollable="true"
+        app:srb_starPadding="0dp"
+        app:srb_stepSize="1"
+        tools:srb_rating="4" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="43dp"
+        android:text="@string/service_label_grade_content"
+        android:textColor="#ff666666"
+        android:textSize="14sp" />
+
+    <EditText
+        android:id="@+id/etContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/service_grade_input_bg"
+        android:gravity="top"
+        android:hint="@string/service_hint_grade_content"
+        android:lines="5"
+        android:paddingStart="13dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="13dp"
+        android:paddingBottom="10dp" />
+
+    <Button
+        android:id="@+id/btnCommit"
+        style="@style/BossGreenBtn"
+        android:text="@string/service_title_grade" />
+</LinearLayout>

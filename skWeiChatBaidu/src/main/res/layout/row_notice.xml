@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/normal_bg"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/bg_for_row_notice"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/margin_screen_old"
+            android:paddingTop="12dp"
+            android:paddingRight="@dimen/margin_screen_old"
+            android:paddingBottom="10dp">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/ivAvatar"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/avatar_normal"
+                app:riv_oval="true" />
+
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@+id/ivAvatar"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_14_text_size"
+                tools:text="@string/example_name" />
+
+            <TextView
+                android:id="@+id/tvTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:textColor="@color/text_value"
+                android:textSize="@dimen/sp_12_text_size"
+                tools:text="2018-10-1" />
+
+        </RelativeLayout>
+
+        <View
+            style="@style/View_Line"
+            android:layout_marginStart="@dimen/margin_screen_old" />
+
+        <TextView
+            android:id="@+id/tvContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/margin_screen_old"
+            android:paddingTop="8dp"
+            android:paddingEnd="@dimen/margin_screen_old"
+            android:paddingBottom="12dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            tools:text="我现在没心情听什么狗屁浪漫爱情故事，我现在只想搞钱，光羡慕别人有什么用？我们现在要行动起来，要变得比别人更有钱。" />
+
+    </LinearLayout>
+
+</LinearLayout>

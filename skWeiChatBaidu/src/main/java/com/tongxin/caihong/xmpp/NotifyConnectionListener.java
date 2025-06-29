@@ -1,0 +1,1 @@
+package com.tongxin.caihong.xmpp;/** * @author zq * 长连接状态监听，仅用于XmppConnectionManager内，长连接状态发送变化后回调到CoreService内 */public interface NotifyConnectionListener {    void notifyConnecting();    void notifyConnected();    void notifyAuthenticated();    void notifyConnectionClosed();    void notifyConnectionClosedOnError(String err);}

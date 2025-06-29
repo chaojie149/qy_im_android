@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.tongxin.caihong.view.MyLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF8F8F8"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/a_view_actionbar" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/department_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/margin_screen_old"
+                    android:paddingTop="17dp"
+                    android:paddingEnd="@dimen/margin_screen_old"
+                    android:paddingBottom="4dp"
+                    android:text="@string/remark"
+                    android:textColor="@color/text_color"
+                    android:textSize="14sp" />
+
+                <com.tongxin.caihong.view.ClearEditText
+                    android:id="@+id/department_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:hint="@string/tip_input_remark"
+                    android:inputType="text"
+                    android:paddingStart="@dimen/margin_screen_old"
+                    android:paddingTop="12dp"
+                    android:paddingEnd="@dimen/margin_screen_old"
+                    android:paddingBottom="12dp"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/margin_screen_old"
+                    android:paddingTop="17dp"
+                    android:paddingEnd="@dimen/margin_screen_old"
+                    android:paddingBottom="4dp"
+                    android:text="@string/tag"
+                    android:textColor="@color/text_color"
+                    android:textSize="14sp" />
+
+                <RelativeLayout
+                    android:id="@+id/rlLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:id="@+id/tv_setting_label"
+                        style="@style/IMTbleLine_TextKey"
+                        android:layout_width="match_parent"
+                        android:layout_toStartOf="@+id/name_arrow_img3"
+                        android:paddingStart="@dimen/margin_screen_old"
+                        android:paddingTop="12dp"
+                        android:paddingEnd="@dimen/margin_screen_old"
+                        android:paddingBottom="12dp"
+                        android:text="@string/remark_tag"
+                        android:textColor="@color/text_value"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:id="@+id/name_arrow_img3"
+                        style="@style/IMTbleLine_ArrowImg"
+                        android:layout_marginEnd="@dimen/margin_screen_old"
+                        android:contentDescription="@string/app_name"
+                        android:tint="#FFD9D9D9"
+                        android:visibility="visible" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/margin_screen_old"
+                    android:paddingTop="17dp"
+                    android:paddingEnd="@dimen/margin_screen_old"
+                    android:paddingBottom="4dp"
+                    android:text="@string/tip_telephone"
+                    android:textColor="@color/text_color"
+                    android:textSize="14sp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/lvAddTelephone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:nestedScrollingEnabled="false"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:itemCount="4"
+                    tools:listitem="@layout/row_add_telephone" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvDescribe"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/margin_screen_old"
+                    android:paddingTop="17dp"
+                    android:paddingEnd="@dimen/margin_screen_old"
+                    android:paddingBottom="4dp"
+                    android:text="@string/describe"
+                    android:textColor="@color/text_color"
+                    android:textSize="14sp" />
+
+                <com.tongxin.caihong.view.ClearEditText
+                    android:id="@+id/etDescribe"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:hint="@string/tip_input_describe"
+                    android:inputType="text"
+                    android:maxLength="50"
+                    android:paddingStart="@dimen/margin_screen_old"
+                    android:paddingTop="12dp"
+                    android:paddingEnd="@dimen/margin_screen_old"
+                    android:paddingBottom="12dp"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</com.tongxin.caihong.view.MyLinearLayout>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/kx_message_pop_bg"
+    android:divider="@drawable/popu_message_divider"
+    android:orientation="vertical"
+    android:showDividers="middle">
+
+    <TextView
+        android:id="@+id/tv_add_department"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@mipmap/add_partment_icon"
+        android:drawablePadding="8dp"
+        android:gravity="start|center_vertical"
+        android:paddingBottom="15dp"
+        android:paddingLeft="18dp"
+        android:paddingRight="18dp"
+        android:paddingTop="15dp"
+        android:text="@string/add_department"
+        android:textColor="@color/white"
+        android:textSize="@dimen/pop_window" />
+
+    <TextView
+        android:id="@+id/tv_motify_cpn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@mipmap/company_change_name"
+        android:drawablePadding="8dp"
+        android:gravity="start|center_vertical"
+        android:paddingBottom="15dp"
+        android:paddingLeft="18dp"
+        android:paddingRight="18dp"
+        android:paddingTop="15dp"
+        android:singleLine="true"
+        android:text="@string/modify_company_name"
+        android:textColor="@color/white"
+        android:textSize="@dimen/pop_window" />
+
+    <TextView
+        android:id="@+id/tvQRCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@mipmap/ic_company_qr_code"
+        android:drawablePadding="8dp"
+        android:gravity="start|center_vertical"
+        android:paddingBottom="15dp"
+        android:paddingLeft="18dp"
+        android:paddingRight="18dp"
+        android:paddingTop="15dp"
+        android:singleLine="true"
+        android:text="@string/company_qr_code"
+        android:textColor="@color/white"
+        android:textSize="@dimen/pop_window" />
+
+    <TextView
+        android:id="@+id/tv_quit_company"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@mipmap/company_quit_icon"
+        android:drawablePadding="8dp"
+        android:gravity="start|center_vertical"
+        android:paddingBottom="15dp"
+        android:paddingLeft="18dp"
+        android:paddingRight="18dp"
+        android:paddingTop="15dp"
+        android:text="@string/exit_company"
+        android:textColor="@color/white"
+        android:textSize="@dimen/pop_window" />
+
+    <TextView
+        android:id="@+id/tv_delete_company"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@mipmap/company_delete_icon"
+        android:drawablePadding="8dp"
+        android:gravity="start|center_vertical"
+        android:paddingBottom="15dp"
+        android:paddingLeft="18dp"
+        android:paddingRight="18dp"
+        android:paddingTop="15dp"
+        android:text="@string/delc_company"
+        android:textColor="@color/white"
+        android:textSize="@dimen/pop_window" />
+
+</LinearLayout>

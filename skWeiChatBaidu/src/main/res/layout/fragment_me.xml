@@ -1,0 +1,467 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/normal_bg"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="25dp"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/rlInfoBackground"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="-30dp"
+                android:paddingBottom="30dp"
+                tools:background="#61D999">
+
+                <com.tongxin.caihong.view.MergerStatus
+                    android:id="@+id/tool_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="43dp"
+                    tools:background="@color/app_skin_normal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        tools:background="#80BFFF">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp">
+
+                            <ImageView
+                                android:id="@+id/iv_title_add"
+                                android:layout_width="@dimen/menu_item_size"
+                                android:layout_height="@dimen/menu_item_size"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:padding="@dimen/menu_item_padding"
+                                android:src="@mipmap/more_icon"
+                                android:tint="@color/white" />
+
+                        </RelativeLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/info_rl"
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginTop="25dp">
+
+                            <ImageView
+                                android:id="@+id/imageView3"
+                                android:layout_width="13dp"
+                                android:layout_height="13dp"
+                                android:layout_marginEnd="34dp"
+                                android:layout_weight="1"
+                                android:tint="@color/white"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:srcCompat="@drawable/me_qrcode" />
+
+                            <ImageView
+                                android:id="@+id/imageView2"
+                                style="@style/IMTbleLine_ArrowImg"
+                                android:layout_height="13dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginEnd="14dp"
+                                android:background="@null"
+                                android:contentDescription="@string/app_name"
+                                android:tint="@color/white"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:srcCompat="@drawable/me_chevron_right" />
+
+                            <com.makeramen.roundedimageview.RoundedImageView
+                                android:id="@+id/avatar_img"
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:layout_marginStart="15dp"
+                                android:layout_marginTop="0dp"
+                                android:layout_marginBottom="0dp"
+                                android:contentDescription="@string/app_name"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/avatar_normal"
+                                android:visibility="visible"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:riv_border_color="#fff"
+                                app:riv_border_width="2dip"
+                                app:riv_oval="true"
+                                tools:src="@drawable/welcome_bg" />
+
+                            <TextView
+                                android:id="@+id/nick_name_tv1"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="22dp"
+                                android:layout_marginTop="19dp"
+                                android:layout_marginEnd="0.8dp"
+                                android:ellipsize="end"
+                                android:singleLine="true"
+                                android:textColor="@color/white"
+                                android:textSize="19sp"
+                                app:layout_constraintHorizontal_bias="0.0"
+                                app:layout_constraintStart_toEndOf="@+id/avatar_img"
+                                app:layout_constraintTop_toTopOf="@+id/avatar_img"
+                                 />
+                            <TextView
+                                android:id="@+id/nick_name_tv"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="3dp"
+                                android:layout_marginTop="19dp"
+                                android:layout_marginEnd="0.8dp"
+                                android:ellipsize="end"
+                                android:singleLine="true"
+                                android:textColor="@color/white"
+                                android:textSize="19sp"
+                                app:layout_constraintEnd_toStartOf="@+id/imageView3"
+                                app:layout_constraintHorizontal_bias="0.0"
+                                app:layout_constraintStart_toEndOf="@id/nick_name_tv1"
+                                app:layout_constraintTop_toTopOf="@+id/avatar_img"
+                                tools:text="@string/example_name" />
+
+                            <TextView
+                                android:id="@+id/phone_number_tv1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="22dp"
+                                android:layout_marginBottom="11dp"
+                                android:textColor="#f2f2f2"
+                                android:textSize="13sp"
+                                app:layout_constraintBottom_toBottomOf="@+id/avatar_img"
+                                app:layout_constraintStart_toEndOf="@+id/avatar_img"
+                             />
+                            <TextView
+                                android:id="@+id/phone_number_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="3dp"
+                                android:layout_marginBottom="11dp"
+                                android:textColor="#f2f2f2"
+                                android:textSize="13sp"
+                                app:layout_constraintBottom_toBottomOf="@+id/avatar_img"
+                                app:layout_constraintStart_toEndOf="@+id/phone_number_tv1"
+                                tools:text="17724494001" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </LinearLayout>
+
+                </com.tongxin.caihong.view.MergerStatus>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-14dp"
+                android:orientation="vertical"
+                android:paddingTop="14dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="9dp"
+                    android:orientation="vertical"
+                    android:showDividers="middle">
+
+                    <RelativeLayout
+                        android:id="@+id/my_bill"
+                        style="@style/IMTbleLine_No_bg"
+                        android:layout_marginHorizontal="@dimen/dp20"
+                        android:background="@drawable/me_radiu_bg"
+                        android:visibility="visible">
+
+                        <com.tongxin.caihong.view.LightImageView
+                            android:layout_width="@dimen/dp20"
+                            android:layout_height="@dimen/dp20"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/my_set_yuer"
+                            android:visibility="gone"
+                            app:srcLight="@drawable/my_set_yuer_light" />
+
+
+                        <TextView
+                            android:id="@+id/mTvMoney"
+                            style="@style/IMTbleLine_TextName"
+                            android:layout_marginStart="12dp"
+                            android:text="￥0"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            style="@style/IMTbleLine_TextName"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="@dimen/dp20"
+                            android:drawableEnd="@drawable/me_chevron_right"
+                            android:drawablePadding="4dp"
+                            android:gravity="center"
+                            android:includeFontPadding="false"
+                            android:text="@string/more_info"
+                            android:textColor="#7a7a7a"
+                            android:textSize="13sp" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="9dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginHorizontal="@dimen/dp20"
+                        android:background="@drawable/me_radiu_bg"
+                        android:orientation="vertical"
+                        android:showDividers="middle">
+
+                        <RelativeLayout
+                            android:id="@+id/my_monry"
+                            style="@style/IMTbleLine_No_bg"
+                            android:visibility="visible">
+
+                            <com.tongxin.caihong.view.LightImageView
+                                android:layout_width="@dimen/dp20"
+                                android:layout_height="@dimen/dp20"
+                                android:layout_alignParentStart="true"
+                                android:layout_centerVertical="true"
+                                android:src="@drawable/my_set_yuer"
+                                app:srcLight="@drawable/my_set_yuer_light" />
+
+                            <TextView
+                                style="@style/IMTbleLine_TextName"
+                                android:text="@string/my_purse" />
+
+                            <ImageView
+                                style="@style/IMTbleLine_ArrowImg"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:background="@drawable/me_chevron_right"
+                                android:contentDescription="@string/app_name" />
+
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.8dp"
+                            android:background="@color/normal_bg" />
+
+                        <RelativeLayout
+                            android:id="@+id/my_space_rl"
+                            style="@style/IMTbleLine_No_bg"
+
+                            android:visibility="visible">
+
+                            <ImageView
+                                style="@style/IMTbleLine_ArrowImg"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:background="@drawable/me_chevron_right"
+                                android:contentDescription="@string/app_name" />
+
+                            <com.tongxin.caihong.view.LightImageView
+                                android:layout_width="@dimen/dp20"
+                                android:layout_height="@dimen/dp20"
+                                android:layout_alignParentStart="true"
+                                android:layout_centerVertical="true"
+                                android:src="@drawable/my_set_speace"
+                                app:srcLight="@drawable/my_set_speace_light" />
+
+                            <TextView
+                                android:id="@+id/MySky"
+                                style="@style/IMTbleLine_TextName"
+                                android:layout_centerVertical="true"
+                                android:text="@string/my_moments" />
+
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.8dp"
+                            android:background="@color/normal_bg" />
+
+                        <RelativeLayout
+                            android:id="@+id/my_collection_rl"
+                            style="@style/IMTbleLine_No_bg"
+                            >
+
+                            <com.tongxin.caihong.view.LightImageView
+                                android:layout_width="@dimen/dp20"
+                                android:layout_height="@dimen/dp20"
+                                android:layout_alignParentStart="true"
+                                android:layout_centerVertical="true"
+                                android:src="@drawable/my_collection"
+                                app:srcLight="@drawable/my_collection_light" />
+
+                            <TextView
+                                android:id="@+id/my_collection_tv"
+                                style="@style/IMTbleLine_TextName"
+                                android:layout_centerVertical="true"
+                                android:text="@string/my_collection" />
+
+                            <ImageView
+                                style="@style/IMTbleLine_ArrowImg"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:background="@drawable/me_chevron_right"
+                                android:contentDescription="@string/app_name" />
+
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.8dp"
+                            android:visibility="gone"
+                            android:background="@color/normal_bg" />
+
+                        <RelativeLayout
+                            android:id="@+id/local_course_rl"
+                            android:visibility="gone"
+                            style="@style/IMTbleLine_No_bg"
+                            >
+
+                            <com.tongxin.caihong.view.LightImageView
+                                android:layout_width="@dimen/dp20"
+                                android:layout_height="@dimen/dp20"
+                                android:layout_alignParentStart="true"
+                                android:layout_centerVertical="true"
+                                android:src="@drawable/my_course"
+                                app:srcLight="@drawable/my_course_light" />
+
+                            <TextView
+                                android:id="@+id/my_course_tv"
+                                style="@style/IMTbleLine_TextName"
+                                android:layout_centerVertical="true"
+                                android:text="@string/my_course" />
+
+                            <ImageView
+                                style="@style/IMTbleLine_ArrowImg"
+                                android:layout_alignParentRight="true"
+                                android:background="@drawable/me_chevron_right"
+                                android:contentDescription="@string/app_name" />
+
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.8dp"
+                            android:background="@color/normal_bg" />
+
+                        <RelativeLayout
+                            android:id="@+id/local_aq"
+                            style="@style/IMTbleLine_No_bg"
+                            >
+
+                            <com.tongxin.caihong.view.LightImageView
+                                android:layout_width="@dimen/dp20"
+                                android:layout_height="@dimen/dp20"
+                                android:layout_alignParentStart="true"
+                                android:layout_centerVertical="true"
+                                android:src="@drawable/aq"
+                                app:srcLight="@drawable/aq" />
+
+                            <TextView
+                                android:id="@+id/my_aq"
+                                style="@style/IMTbleLine_TextName"
+                                android:layout_centerVertical="true"
+                                android:text="@string/secure_settings" />
+
+                            <ImageView
+                                style="@style/IMTbleLine_ArrowImg"
+                                android:layout_alignParentRight="true"
+                                android:background="@drawable/me_chevron_right"
+                                android:contentDescription="@string/app_name" />
+
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.8dp"
+                            android:background="@color/normal_bg" />
+
+                        <RelativeLayout
+                            android:id="@+id/local_ys"
+                            style="@style/IMTbleLine_No_bg"
+                            >
+
+                            <com.tongxin.caihong.view.LightImageView
+                                android:layout_width="@dimen/dp20"
+                                android:layout_height="@dimen/dp20"
+                                android:layout_alignParentStart="true"
+                                android:layout_centerVertical="true"
+                                android:src="@drawable/ys"
+                                app:srcLight="@drawable/ys" />
+
+                            <TextView
+                                android:id="@+id/my_ys"
+                                style="@style/IMTbleLine_TextName"
+                                android:layout_centerVertical="true"
+                                android:text="@string/privacy_setting" />
+
+                            <ImageView
+                                style="@style/IMTbleLine_ArrowImg"
+                                android:layout_alignParentRight="true"
+                                android:background="@drawable/me_chevron_right"
+                                android:contentDescription="@string/app_name" />
+
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.8dp"
+                            android:background="@color/normal_bg" />
+
+                        <RelativeLayout
+                            android:id="@+id/my_settings_rl"
+                            style="@style/IMTbleLine_No_bg"
+                            >
+
+                            <com.tongxin.caihong.view.LightImageView
+                                android:layout_width="@dimen/dp20"
+                                android:layout_height="@dimen/dp20"
+                                android:layout_alignParentStart="true"
+                                android:layout_centerVertical="true"
+                                android:src="@drawable/my_set_title"
+                                app:srcLight="@drawable/my_set_title_light" />
+
+                            <TextView
+                                android:id="@+id/SettingTv"
+                                style="@style/IMTbleLine_TextName"
+                                android:layout_centerVertical="true"
+                                android:text="@string/settings" />
+
+                            <ImageView
+                                style="@style/IMTbleLine_ArrowImg"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:background="@drawable/me_chevron_right"
+                                android:contentDescription="@string/app_name" />
+
+                        </RelativeLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

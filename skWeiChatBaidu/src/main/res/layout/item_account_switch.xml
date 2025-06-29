@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="25dp"
+    android:layout_marginEnd="25dp"
+    android:background="@drawable/list_selector_background_ripple"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="9dp"
+        android:paddingBottom="9dp">
+
+        <ImageView
+            android:id="@+id/ivDelete"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="16dp"
+            android:src="@mipmap/account_switch_edit_delete"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/ivHead"
+            android:layout_width="56dp"
+            android:layout_toEndOf="@+id/ivDelete"
+            android:layout_height="56dp"
+            android:layout_centerVertical="true"
+            android:scaleType="centerCrop"
+            android:visibility="visible"
+            app:riv_oval="true" />
+
+        <LinearLayout
+            android:id="@+id/info_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/dp15"
+            android:layout_toEndOf="@id/ivHead"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvName"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_16_text_size" />
+
+                <TextView
+                    android:id="@+id/ivCurrentAccount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="9dp"
+                    android:background="@drawable/account_switch_current_bg"
+                    android:paddingStart="5dp"
+                    android:paddingTop="1dp"
+                    android:paddingEnd="5dp"
+                    android:paddingBottom="1dp"
+                    android:text="@string/label_account_switch_current"
+                    android:textColor="#ff55beb7"
+                    android:textSize="8sp"
+                    android:visibility="gone"
+                    tools:ignore="SmallSp"
+                    tools:visibility="visible" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvAccount"
+                android:layout_width="fill_parent"
+                android:layout_marginTop="2dp"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:textColor="@color/grey"
+                android:textSize="13sp"
+                android:visibility="visible" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/kx_message_pop_bg"
+    android:divider="@drawable/popu_message_divider"
+    android:orientation="vertical"
+    android:showDividers="middle">
+
+    <LinearLayout
+        android:id="@+id/create_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/message_pop_item_bg_selector"
+        android:gravity="center_vertical"
+        android:minWidth="140dp"
+        android:minHeight="40dp"
+        android:orientation="horizontal"
+        android:paddingLeft="18dp"
+        android:paddingTop="15dp"
+        android:paddingRight="18dp"
+        android:paddingBottom="15dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@mipmap/a_group_chat_icon" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:paddingStart="8dp"
+            android:text="@string/create_group"
+            android:textColor="@color/white"
+            android:textSize="@dimen/pop_window" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/add_friends"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/message_pop_item_bg_selector"
+        android:gravity="center_vertical"
+        android:minWidth="140dp"
+        android:minHeight="40dp"
+        android:orientation="horizontal"
+        android:paddingLeft="18dp"
+        android:paddingTop="15dp"
+        android:paddingRight="18dp"
+        android:paddingBottom="15dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@mipmap/add_icon" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:paddingStart="8dp"
+            android:text="@string/add_friends"
+            android:textColor="@color/white"
+            android:textSize="@dimen/pop_window" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/scanning"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/message_pop_item_bg_selector"
+        android:gravity="center_vertical"
+        android:minWidth="140dp"
+        android:minHeight="40dp"
+        android:orientation="horizontal"
+        android:paddingLeft="18dp"
+        android:paddingTop="15dp"
+        android:paddingRight="18dp"
+        android:paddingBottom="15dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@mipmap/scan_icon" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:paddingStart="8dp"
+            android:text="@string/scanning"
+            android:textColor="@color/white"
+            android:textSize="@dimen/pop_window" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/receipt_payment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/message_pop_item_bg_selector"
+        android:gravity="center_vertical"
+        android:minWidth="140dp"
+        android:minHeight="40dp"
+        android:orientation="horizontal"
+        android:paddingLeft="18dp"
+        android:paddingTop="15dp"
+        android:paddingRight="18dp"
+        android:paddingBottom="15dp"
+        android:visibility="visible">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@mipmap/receiving_icon" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:paddingStart="8dp"
+            android:text="@string/receipt_payment"
+            android:textColor="@color/white"
+            android:textSize="@dimen/pop_window" />
+
+    </LinearLayout>
+
+</LinearLayout>

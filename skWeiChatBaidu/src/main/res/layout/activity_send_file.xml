@@ -1,0 +1,107 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/normal_bg">
+
+    <include
+        android:id="@id/tb"
+        layout="@layout/a_view_actionbar" />
+
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_layout"
+        android:layout_below="@id/tb">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/text_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/app_white"
+                android:gravity="top"
+                android:hint="@string/circle_now_think"
+                android:inputType="textMultiLine"
+                android:maxLength="10000"
+                android:maxLines="10"
+                android:minHeight="80dp"
+                android:padding="10dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/grey"
+                android:textSize="@dimen/say_something_size" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <!--<ImageView-->
+                <!--android:id="@+id/add_file_iv"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:src="@drawable/send_file" />-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:padding="10dp">
+
+                    <include
+                        android:id="@+id/add_video_item"
+                        layout="@layout/layout_circle_add_more_item" />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/send_file_rl"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="9dp"
+                    android:layout_marginRight="9dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/a_collection_for_file"
+                    android:padding="8dp"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/file_img"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerVertical="true"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="@string/app_name"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_muc_flie_type_y" />
+
+                    <TextView
+                        android:id="@+id/file_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@id/file_img"
+                        android:ellipsize="end"
+                        android:maxLines="2"
+                        android:text="@string/msg_file"
+                        android:textColor="#242424"
+                        android:textSize="@dimen/chat_text_size" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <include layout="@layout/block_send_circle_set_bar" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

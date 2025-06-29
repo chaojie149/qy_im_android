@@ -1,0 +1,103 @@
+# ---------------------
+# Android/IntelliJ 基本忽略项
+# ---------------------
+
+# 编译输出目录
+/build/
+/*/build/
+/*/target/
+
+# 本地配置文件
+local.properties
+*.iml
+
+# .idea 目录（除非你想共享项目配置）
+.idea/
+.gradle/
+.cxx/
+
+# 日志文件
+*.log
+
+# 缓存目录
+.cache/
+captures/
+.externalNativeBuild/
+
+# OS 生成的系统文件
+.DS_Store
+Thumbs.db
+
+# Gradle Wrapper 本地配置
+.gradle/
+!gradle/wrapper/gradle-wrapper.jar
+
+# Keystore 文件（如果你使用签名）
+*.jks
+*.keystore
+
+# NDK/CMakelists 构建临时目录
+.cxx/
+
+# Lint 报告
+lint/intermediates/
+lint/generated/
+
+# 单元测试和覆盖率
+*.ec
+*.hprof
+
+# Android Studio 3.5+ 构建缓存
+.idea/caches/
+.idea/libraries/
+.idea/modules.xml
+.idea/workspace.xml
+.idea/navEditor.xml
+.idea/assetWizardSettings.xml
+
+# 本地发布版本（APK、AAB）
+*.apk
+*.ap_
+*.aab
+
+# Firebase crashlytics
+firebase-app-id.json
+crashlytics-build.properties
+
+# ProGuard
+proguard/
+
+# Kotlin 编译生成文件
+*.kotlin_module
+
+# Jetpack Compose preview cache
+.idea/composePreview/
+
+# 编译中间文件
+*.dex
+*.class
+
+# 忽略 NDK 构建生成目录
+obj/
+
+# 忽略 Mac/Linux 下的 swap 文件
+*.swp
+*.swo
+
+# 忽略 VS Code 配置（如你使用）
+.vscode/
+
+# 忽略 flutter 编译生成（如为 Flutter 混编项目）
+.flutter-plugins
+.dart_tool/
+.build/
+pubspec.lock
+
+# Git LFS 锁文件（可选）
+*.lfs
+
+# ---------------------
+# 可选：忽略 gradle.properties（如果有敏感配置）
+# ---------------------
+# gradle.properties
+

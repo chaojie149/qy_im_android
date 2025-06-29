@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/catagory_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingStart="@dimen/margin_screen_old"
+        android:paddingTop="5dp"
+        android:paddingEnd="@dimen/margin_screen_old"
+        android:paddingBottom="5dp"
+        android:textColor="@color/text_value"
+        android:textSize="@dimen/sp_16_text_size"
+        android:visibility="gone"
+        tools:text="A"
+        tools:visibility="visible" />
+
+    <View
+        android:id="@+id/view_bg_friend"
+        style="@style/View_Line"
+        android:layout_height="0dp"
+        android:layout_marginStart="64dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/list_selector_background_ripple"
+        android:minHeight="64dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+
+        <CheckBox
+            android:id="@+id/check_box"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:button="@drawable/sel_nor_wx2"
+            android:clickable="false"
+            android:focusable="false" />
+
+        <FrameLayout
+            android:id="@+id/head_area"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true">
+
+            <com.tongxin.caihong.view.CircleImageView
+                android:id="@+id/avatar_img"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_vertical"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/avatar_normal" />
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/user_name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="9dp"
+            android:layout_marginEnd="9dp"
+            android:layout_toStartOf="@+id/check_box"
+            android:layout_toEndOf="@id/head_area"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="@dimen/one_level_title" />
+
+    </RelativeLayout>
+
+</LinearLayout>

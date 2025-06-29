@@ -1,0 +1,16 @@
+apply plugin: 'com.android.library'
+android {
+    compileSdkVersion compile_version
+    defaultConfig {
+        minSdkVersion min_version
+        targetSdkVersion target_version
+        consumerProguardFiles 'proguard-rules.txt'
+    }
+    resourcePrefix "image_"
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.0.0'
+    implementation 'com.facebook.fresco:fresco:1.7.1'
+    implementation 'androidx.recyclerview:recyclerview:1.0.0'
+}
