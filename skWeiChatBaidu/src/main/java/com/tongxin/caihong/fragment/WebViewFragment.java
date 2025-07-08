@@ -22,6 +22,7 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.view.animation.DecelerateInterpolator;
+import android.webkit.PermissionRequest;
 import android.webkit.ValueCallback;
 import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
@@ -193,6 +194,13 @@ public class WebViewFragment extends EasyFragment {
         // 网页播放视频有画面没声音<http://web.meiyanchat.com/aa.html>添加如下代码
         // 自动播放网页音乐
         mWebView.getSettings().setMediaPlaybackRequiresUserGesture(false);
+        mWebView.setWebChromeClient(new WebChromeClient() {
+            @Override
+            public void onPermissionRequest(final PermissionRequest request) {
+                // 授予摄像头/麦克风权限
+                request.grant(request.getResources());
+            }
+        });
 
         // 设置UserAgent标识
         mWebView.getSettings().setUserAgentString(mWebView.getSettings().getUserAgentString() + " app-chatimapp");
